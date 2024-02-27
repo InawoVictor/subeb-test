@@ -59,7 +59,7 @@
         @apply px-4 py-2 text-sm bg-secondary text-white cursor-pointer border border-transparent rounded-md focus:outline-none  ;
     }
     .btn-2{
-        @apply px-4 py-2 text-sm bg-transparent text-primary  rounded-md focus:outline-none cursor-pointer ;
+        @apply px-4 md:py-2 py-1 text-sm bg-transparent text-primary  rounded-md focus:outline-none cursor-pointer ;
         border: 1px solid transparent;
         border-image: linear-gradient(#0D99FF, #020066) 1;
         border-radius: 6px;
