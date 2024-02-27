@@ -1,16 +1,16 @@
 <template>
-  <div class=" mt-[-121px] relative h-[823px]">
-    <img src="/img/hero.png" alt="" class="w-full bg-primary">
+  <div class=" md:mt-[-121px] mt-[-170px] relative md:h-[823px] h-[780px] ">
+    <img src="/img/hero.png" alt="" class="w-full bg-primary h-full object-cover ">
     <div class="absolute top-[260px] w-[70%] stay-center text-txtWhite">
-      <span class="text-[35px] font-dmSans font-[400]">
+      <span class="lg:text-[35px] md:text-[23px] text-sm font-dmSans font-[400]">
         Welcome To
       </span>
       <div>
-        <h1 class="font-inter text-[43px] font-semibold mt-10 leading-[60px]">
+        <h1 class="font-inter lg:text-[43px] md:text-[35px] text-[23px] font-semibold mt-5 lg:mt-10 leading-[30px] md:leading-[36px] lg:leading-[60px]">
           CROSS RIVER STATE UNIVERSAL BASIC EDUCATION BOARD (CRSUBEB)
         </h1>
       </div>
-      <p class="text-[20px] font-dmSans mt-10">
+      <p class="lg:text-[20px] md:text-lg text-[11px] font-dmSans mt-5 lg:mt-10">
         As the driving force behind educational 
         development in Cross River State, SUBEB is 
         dedicated to fostering a transformative learning 
@@ -20,7 +20,7 @@
         Join us in our mission to unlock the full 
         potential of every learner and build a brighter tomorrow for Cross River State!
       </p>
-      <button class="btn mt-10 font-inter font-[500] text-[16px] px-[32px] py-[16px]">
+      <button class="btn mt-10 font-inter font-[500] text-[7px] md:text-sm lg:text-[16px] lg:px-[32px] md:px-6 px-4 lg:py-[16px] md:py-3 py-2">
         Learn more
       </button>
     </div>
