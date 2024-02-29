@@ -140,11 +140,15 @@
                         >
                             <ul>
                                 <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
-                                    @click="navigateTo('/about/crsubeb')"
+                                    @click="navigateTo('/media/gallery')"
                                 >
                                     Gallery
                                 </li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm">News</li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/media/news')"
+                                >
+                                    News
+                                </li>
                             </ul>
                         </div>
                     </li>
