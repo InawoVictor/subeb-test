@@ -16,8 +16,11 @@ export default {
         priBg: "#F5E6FE",
         txtWhite: "#ffffff",
         txtDark: "#333333",
-        darkBg: '#1E1E2E',
-        darkBgSec: '#27293D'
+        txtDark2: "#242424",
+        txtDark3: "#666666",
+        grayBg: "#F8F8F8",
+        darkBgSec: '#27293D',
+        whiteBg: '#ffffff'
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

@@ -16,29 +16,137 @@
                             <span>Home</span>
                         </RouterLink>
                     </li>
-                    <li class="pl-3 font-bold bod-l cursor-pointer">
-                        <RouterLink to="/" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                    <li 
+                        class="pl-3 font-bold bod-l cursor-pointer"
+                        :class="
+                            isAboutMenu ?
+                            'relative' :
+                            ''
+                        "
+                        @mouseenter="isAboutMenu= true"
+                        @mouseleave="isAboutMenu= false"
+                    >
+                        <div class="text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>About</span>
                             <Icon name="oui:arrow-down" size="12" color="white" />
-                        </RouterLink>
+                        </div>
+                        <div
+                            id="AboutMenu"
+                            v-if="isAboutMenu"
+                            class="absolute bg-white w-[151px]
+                            text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
+                        >
+                            <ul>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/about/crsubeb')"
+                                >
+                                    CRSUBEB
+                                </li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/about/management')"
+                                >
+                                    The Management
+                                </li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/about/departments')"
+                                >
+                                    Departments
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="pl-3 font-bold bod-l cursor-pointer">
-                        <RouterLink to="/resources" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                    <li 
+                        class="pl-3 font-bold bod-l cursor-pointer"
+                        :class="
+                            isResourcesMenu ?
+                            'relative' :
+                            ''
+                        "
+                        @mouseenter="isResourcesMenu= true"
+                        @mouseleave="isResourcesMenu= false"
+                    >
+                        <div class="text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Resources</span>
                             <Icon name="oui:arrow-down" size="12" color="white" />
-                        </RouterLink>
+                        </div>
+                        <div
+                            id="ResourcesMenu"
+                            v-if="isResourcesMenu"
+                            class="absolute bg-white w-[151px]
+                            text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
+                        >
+                            <ul>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm">
+                                    Lesson Notes
+                                </li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/resources/emis-data')"
+                                >
+                                    EMIS Report
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="pl-3 font-bold bod-l cursor-pointer">
-                        <RouterLink to="/" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                    <li 
+                        class="pl-3 font-bold bod-l cursor-pointer"
+                        :class="
+                            isProgramsMenu ?
+                            'relative' :
+                            ''
+                        "
+                        @mouseenter="isProgramsMenu= true"
+                        @mouseleave="isProgramsMenu= false"
+                    >
+                        <div class="text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Programs</span>
                             <Icon name="oui:arrow-down" size="12" color="white" />
-                        </RouterLink>
+                        </div>
+                        <div
+                            id="ProgramsMenu"
+                            v-if="isProgramsMenu"
+                            class="absolute bg-white w-[151px]
+                            text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
+                        >
+                            <ul>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/about/crsubeb')"
+                                >
+                                    Overview
+                                </li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm">Projects</li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm">Trainings</li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="pl-3 font-bold bod-l cursor-pointer">
-                        <RouterLink to="/" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                    <li 
+                        class="pl-3 font-bold bod-l cursor-pointer"
+                        :class="
+                            isMediaMenu ?
+                            'relative' :
+                            ''
+                        "
+                        @mouseenter="isMediaMenu= true"
+                        @mouseleave="isMediaMenu= false"
+                    >
+                        <div class="text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Media</span>
                             <Icon name="oui:arrow-down" size="12" color="white" />
-                        </RouterLink>
+                        </div>
+                        <div
+                            id="MediaMenu"
+                            v-if="isMediaMenu"
+                            class="absolute bg-white w-[151px]
+                            text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
+                        >
+                            <ul>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/about/crsubeb')"
+                                >
+                                    Gallery
+                                </li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm">News</li>
+                            </ul>
+                        </div>
                     </li>
                     <li class=" pl-3 font-bold bod-l">
                         <RouterLink to="/contact-us" class=" text-txtWhite gap-x-3 flex justify-between items-center">
@@ -172,6 +280,10 @@
 import InputText from 'primevue/inputtext';
 
 const showNav = ref(false)
+const isAboutMenu = ref(false)
+const isResourcesMenu = ref(false)
+const isProgramsMenu = ref(false)
+const isMediaMenu = ref(false)
 
 
 </script>
