@@ -47,7 +47,7 @@
 @layer components {
     /* CONFIG COMPONENTS */
     .container {
-        @apply w-[90%] md:w-4/5 lg:w-[75%] 2xl:w-[1500px] mx-auto max-w-[90%] overflow-hidden;
+        @apply w-[90%] md:w-4/5 lg:w-[1237px] 1xl:w-[1237px] mx-auto max-w-[90%] py-16 overflow-hidden;
     }
     .container-2 {
     @apply w-[90%] md:w-4/5 lg:w-[80%] 2xl:w-[1500px] mx-auto max-w-[90%] overflow-hidden;
@@ -72,6 +72,14 @@
     .submit-btn{
     @apply px-[24px] py-[12px] font-bold text-[16px] uppercase font-montserrat text-sm bg-secondary text-white cursor-pointer border border-transparent rounded-sm focus:outline-none  ;
     }
+
+    .card-2{
+        @apply w-[594px] h-[237px] shadow-[0_10px_50px_2px_rgba(0,0,0,0.08)] py-[36px] px-[24px] text-[#212121] rounded-[10px];
+    }
+    .card-3{
+        @apply w-[385px] h-[449px] rounded-[20px] cursor-pointer shadow-[0_4px_10px_0px_rgba(0,0,0,0.06)] overflow-hidden;
+    }
+
 }
 
 @layer utilities {
@@ -84,6 +92,18 @@
     .input {
         @apply border border-solid rounded-sm border-[#E0E0E0] py-[12px] px-[20px] h-[50px] focus:outline-none focus:border-gray-600 transition-all duration-200 ease-in-out placeholder:font-dmSans placeholder:font-normal placeholder:text-sm;
       /* outline: none; */
+    }
+    .header-text{
+        @apply font-dmSans font-bold lg:text-[50px] md:text-[26px] text-[23px] text-primary leading-[25px] md:leading-[65px];
+    }
+    .content{
+        @apply font-dmSans text-[20px] font-normal leading-[30px];
+    }
+    .card3-header{
+       @apply text-[24px] font-bold font-dmSans text-txtDark2;
+    }
+    .card3-subheader{
+        @apply text-[16px] font-dmSans font-normal;
     }
     /* .input:focus{
       border: none !important;
