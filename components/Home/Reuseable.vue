@@ -95,8 +95,7 @@
                         {{slotProps.data.title}}
                     </h3>
                     <p class="mt-1 text-[#212121] font-dmSans font-normal text-sm">
-                        In a bid to ensure quality education in primary and secondary schools 
-                        across the states, the ministry of education in collaboration with NAPSS...
+                        {{slotProps.data.info}}
                     </p>
                     <button class="btn bg-primary mt-10  flex items-center gap-2">
                         <span class="font-[500] text-[16px]">Read more</span>
@@ -164,8 +163,8 @@ const responsiveOptions = ref([
 
 
 </script>
-    
-    <style scoped>
+
+<style scoped>
     .bor-b {
         border-bottom: 1px solid #B3B3B3;
     }
