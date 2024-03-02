@@ -109,12 +109,17 @@
                         >
                             <ul>
                                 <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
-                                    @click="navigateTo('/about/crsubeb')"
+                                    @click="navigateTo('/programs/Overview')"
                                 >
                                     Overview
                                 </li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm">Projects</li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm">Trainings</li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/programs/Projects')"
+                                >Projects</li>
+                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                    @click="navigateTo('/programs/Trainings')"
+                                >Trainings
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -170,12 +175,22 @@
             </div>
             <div class="flex flex-1 items-center py-2 2md:pl-5 px-10">
                 <ul class=" flex flex-wrap w-full sm:gap-0 gap-x-6 gap-y-4 2md:px-10 sm:justify-between items-center">
-                    <li class="text-[12px] px-2 font-[400] uppercase  text-black font-dmSans cursor-pointer">Gallery</li>
+                    <li class="text-[12px] px-2 font-[400] uppercase  text-black font-dmSans cursor-pointer"
+                    @click="navigateTo('/media/gallery')"
+                    >
+                        Gallery
+                    </li>
                     <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Blog</li>
-                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">News</li>
+                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer"
+                        @click="navigateTo('/media/news')"
+                    >
+                        News
+                    </li>
                     <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Board</li>
                     <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Projects</li>
-                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Reports</li>
+                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">
+                        Reports
+                    </li>
                 </ul>
             </div>
         </div>
@@ -281,7 +296,6 @@
 </template>
 
 <script setup lang="ts">
-import InputText from 'primevue/inputtext';
 
 const showNav = ref(false)
 const isAboutMenu = ref(false)
