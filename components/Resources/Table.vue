@@ -41,9 +41,6 @@
 </template>
 
 <script setup lang="ts">
-import InputGroup from 'primevue/inputgroup';
-import InputGroupAddon from 'primevue/inputgroupaddon';
-import InputText from 'primevue/inputtext';
 
 const data = ref([
     {

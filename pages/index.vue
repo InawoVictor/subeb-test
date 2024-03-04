@@ -1,5 +1,4 @@
 <template>
-    <TheNavbar />
     <HomeHero />
     <HomeIntro/>
     <HomeTraction/>
@@ -8,7 +7,6 @@
     <HomeGallery />
     <HomeReuseable />
     <HomeReuseable />
-    <TheFooter />
 </template>
 
 <script setup>
