@@ -37,4 +37,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
+  primevue: {
+    components: {
+      include: '*',
+    }
+  }
 })
