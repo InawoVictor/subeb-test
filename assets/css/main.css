@@ -50,7 +50,7 @@
         @apply w-[90%] md:w-4/5 lg:w-[1237px] 1xl:w-[1237px] mx-auto max-w-[90%] py-16 overflow-hidden;
     }
     .container-2 {
-    @apply w-[90%] md:w-4/5 lg:w-[80%] 2xl:w-[1500px] mx-auto max-w-[90%] overflow-hidden;
+    @apply w-[90%] md:w-4/5 lg:w-[80%] xl:w-[1036px] mx-auto max-w-[90%] overflow-hidden;
     }
 
     /** BUTTON **/
@@ -74,7 +74,7 @@
     }
 
     .card-2{
-        @apply w-[594px] h-[237px] shadow-[0_10px_50px_2px_rgba(0,0,0,0.08)] py-[36px] px-[24px] text-[#212121] rounded-[10px];
+        @apply md:w-[594px] w-full md:h-[237px] h-[135px] md:shadow-[0_10px_50px_2px_rgba(0,0,0,0.08)] shadow-[0_8px_40px_2px_rgba(0,0,0,0.08)] py-[36px] px-[24px] text-[#212121] rounded-[10px];
     }
     .card-3{
         @apply w-[385px] h-[449px] rounded-[20px] cursor-pointer shadow-[0_4px_10px_0px_rgba(0,0,0,0.06)] overflow-hidden;
@@ -94,10 +94,10 @@
       /* outline: none; */
     }
     .header-text{
-        @apply font-dmSans font-bold lg:text-[50px] md:text-[26px] text-[23px] text-primary leading-[25px] md:leading-[65px];
+        @apply font-dmSans font-bold lg:text-[50px] md:text-[35px] text-[23px] text-primary leading-[25px] md:leading-[45px] lg:leading-[65px];
     }
     .content{
-        @apply font-dmSans text-[20px] font-normal leading-[30px];
+        @apply font-dmSans md:text-[20px] sm:text-sm text-[11px] font-normal leading-[18px] sm:leading-[25px] lg:leading-[30px];
     }
     .card3-header{
        @apply text-[24px] font-bold font-dmSans text-txtDark2;
@@ -110,4 +110,4 @@
       outline: none;
     } */
     
-    }
+}

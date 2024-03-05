@@ -4,7 +4,7 @@
             <h2 class="header-text mb-12 text-center">
                 Other Members
             </h2>
-            <ul class="grid grid-cols-[repeat(auto-fill,_minmax(385px,_1fr))] items-center gap-y-8">
+            <ul class="grid grid-cols-[repeat(auto-fill,_minmax(385px,_1fr))] justify-items-center justify-center items-center gap-y-8">
                 <li class="card-3">
                     <img src="/img/ansa.png" class="w-full h-[300px] object-cover" alt="Emmanuel Ansa">
                     <div class="py-4 px-6 ">

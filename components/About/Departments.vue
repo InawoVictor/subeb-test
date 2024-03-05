@@ -1,114 +1,16 @@
 <template>
     <div class="bg-whiteBg">
         <div class="container">
-            <h2 class="header-text">
+            <h2 class="header-text lg:text-left text-center mb-8">
                 Departments
             </h2>
-            <ul class="flex flex-col gap-y-16">
-                <li class="w-full h-[413px] flex shadow-[0_4px_10px_0px_rgba(0,0,0,0.08)] rounded-[20px] overflow-hidden">
-                    <div class="flex-1 px-[66px] py-[48px]">
-                        <h3 class="font-dmSans font-bold text-[20px] mb-8 text-primary">SUPPORT SERVICE DEPARTMENTS</h3>
-                        <p class="text-lg mb-4 font-dmSans font-normal text-txtDark3" style="font-style: italic;">
-                            Posted by John Doe 21/4/2020
-                        </p>
-                        <p class="content text-sm text-[#212121]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Curabitur a quam molestie metus auctor vehicula a at 
-                            nunc. Pellentesque blandit odio ac bibendum tincidunt. 
-                            Quisque id scelerisque quam, 
-                            et elementum massa. Integer gravida mollis enim at hendrerit.
-                        </p>
-                        <button class="btn mt-10  flex items-center gap-2" 
-                            @click="router.push('/about/departments/support-service')"
-                        >
-                            <span class="font-[500] text-[16px]">Read more</span>
-                            <Icon name="mingcute:arrow-right-line" width="16" color="white"/>
-                        </button>
-                    </div>
-                    <img src="/img/business-man.png" class="w-[523px]  h-full" alt="">
-                </li>
-                <li class="w-full h-[413px] flex shadow-[0_4px_10px_0px_rgba(0,0,0,0.08)] rounded-[20px] overflow-hidden">
-                    <div class="flex-1 px-[66px] py-[48px]">
-                        <h3 class="font-dmSans font-bold text-[20px] mb-8 text-primary">FINANCE AND ACCOUNT DEPARTMENT</h3>
-                        <p class="text-lg mb-4 font-dmSans font-normal text-txtDark3" style="font-style: italic;">
-                            Posted by John Doe  on 21/4/2020 at 12:45am
-                        </p>
-                        <p class="content text-sm text-[#212121]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Curabitur a quam molestie metus auctor vehicula a at 
-                            nunc. Pellentesque blandit odio ac bibendum tincidunt. 
-                            Quisque id scelerisque quam, 
-                            et elementum massa. Integer gravida mollis enim at hendrerit.
-                        </p>
-                        <button class="btn mt-10  flex items-center gap-2"
-                            @click="router.push('/about/departments/finance-and-account')"
-                        >
-                            <span class="font-[500] text-[16px]">Read more</span>
-                            <Icon name="mingcute:arrow-right-line" width="16" color="white"/>
-                        </button>
-                    </div>
-                    <img src="/img/african-man.png" class="w-[523px]  h-full" alt="">
-                </li>
-                <li class="w-full h-[413px] flex shadow-[0_4px_10px_0px_rgba(0,0,0,0.08)] rounded-[20px] overflow-hidden">
-                    <div class="flex-1 px-[66px] py-[48px]">
-                        <h3 class="font-dmSans font-bold text-[20px] mb-8 text-primary">QUALITY ASSURANCE DEPARTMENT</h3>
-                        <p class="text-lg mb-4 font-dmSans font-normal text-txtDark3" style="font-style: italic;">
-                            Posted by John Doe  on 21/4/2020 at 12:45am
-                        </p>
-                        <p class="content text-sm text-[#212121]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Curabitur a quam molestie metus auctor vehicula a at 
-                            nunc. Pellentesque blandit odio ac bibendum tincidunt. 
-                            Quisque id scelerisque quam, 
-                            et elementum massa. Integer gravida mollis enim at hendrerit.
-                        </p>
-                        <button class="btn mt-10  flex items-center gap-2">
-                            <span class="font-[500] text-[16px]">Read more</span>
-                            <Icon name="mingcute:arrow-right-line" width="16" color="white"/>
-                        </button>
-                    </div>
-                    <img src="/img/workmates.png" class="w-[523px]  h-full" alt="">
-                </li>
-                <li class="w-full h-[413px] flex shadow-[0_4px_10px_0px_rgba(0,0,0,0.08)] rounded-[20px] overflow-hidden">
-                    <div class="flex-1 px-[66px] py-[48px]">
-                        <h3 class="font-dmSans font-bold text-[20px] mb-8 text-primary">SCHOOL’S MANAGEMENT DEPARTMENT</h3>
-                        <p class="text-lg mb-4 font-dmSans font-normal text-txtDark3" style="font-style: italic;">
-                            Posted by John Doe on 21/4/2020 at 12:45am
-                        </p>
-                        <p class="content text-sm text-[#212121]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Curabitur a quam molestie metus auctor vehicula a at 
-                            nunc. Pellentesque blandit odio ac bibendum tincidunt. 
-                            Quisque id scelerisque quam, 
-                            et elementum massa. Integer gravida mollis enim at hendrerit.
-                        </p>
-                        <button class="btn mt-10  flex items-center gap-2">
-                            <span class="font-[500] text-[16px]">Read more</span>
-                            <Icon name="mingcute:arrow-right-line" width="16" color="white"/>
-                        </button>
-                    </div>
-                    <img src="/img/group.png" class="w-[523px]  h-full" alt="">
-                </li>
-                <li class="w-full h-[413px] flex shadow-[0_4px_10px_0px_rgba(0,0,0,0.08)] rounded-[20px] overflow-hidden">
-                    <div class="flex-1 px-[66px] py-[48px]">
-                        <h3 class="font-dmSans font-bold text-[20px] mb-8 text-primary">PROJECT MONITORING DEPARTMENT</h3>
-                        <p class="text-lg mb-4 font-dmSans font-normal text-txtDark3" style="font-style: italic;">
-                            Posted by John Doe on 21/4/2020 at 12:45am
-                        </p>
-                        <p class="content text-sm text-[#212121]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Curabitur a quam molestie metus auctor vehicula a at 
-                            nunc. Pellentesque blandit odio ac bibendum tincidunt. 
-                            Quisque id scelerisque quam, 
-                            et elementum massa. Integer gravida mollis enim at hendrerit.
-                        </p>
-                        <button class="btn mt-10  flex items-center gap-2">
-                            <span class="font-[500] text-[16px]">Read more</span>
-                            <Icon name="mingcute:arrow-right-line" width="16" color="white"/>
-                        </button>
-                    </div>
-                    <img src="/img/woman.png" class="w-[523px]  h-full" alt="">
-                </li>
+            <ul class="flex flex-col md:gap-y-16 gap-y-8">
+                <li v-for="(department, index) in departments" :key="index" class="w-full lg:h-[413px] md:h-[300px] h-[153px] flex shadow-[0_4px_10px_0px_rgba(0,0,0,0.08)] rounded-[20px] overflow-hidden">
+                    <AboutDepartmentsCard  :title="department.title"
+                        :content="department.content" :to="department.to"
+                        :image="department.image" :author="department.author"
+                    />
+                </li>                
             </ul>
         </div>
     </div>
@@ -116,6 +18,43 @@
 
 <script lang="ts" setup>
 const router = useRouter()
+
+const departments = ref([
+    {
+        title: "SUPPORT SERVICE DEPARTMENTS",
+        author: "Posted by John Doe 21/4/2020",
+        image: "/img/business-man.png",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a quam molestie metus auctor vehicula a at nunc. Pellentesque blandit odio ac bibendum tincidunt. Quisque id scelerisque quam, et elementum massa. Integer gravida mollis enim at hendrerit. ",
+        to:"/support-service",
+    },
+    {
+        title: "FINANCE AND ACCOUNT DEPARTMENT",
+        author: "Posted by John Doe 21/4/2020",
+        image: "/img/african-man.png",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a quam molestie metus auctor vehicula a at nunc. Pellentesque blandit odio ac bibendum tincidunt. Quisque id scelerisque quam, et elementum massa. Integer gravida mollis enim at hendrerit. ",
+        to:"/finance-and-account",
+    },
+    {
+        title: "QUALITY ASSURANCE DEPARTMENT",
+        author: "Posted by John Doe 21/4/2020",
+        image: "/img/workmates.png",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a quam molestie metus auctor vehicula a at nunc. Pellentesque blandit odio ac bibendum tincidunt. Quisque id scelerisque quam, et elementum massa. Integer gravida mollis enim at hendrerit. ",
+        to: "",
+    },
+    {
+        title: "SCHOOL’S MANAGEMENT DEPARTMENT",
+        image: "/img/group.png",
+        author: "Posted by John Doe 21/4/2020",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a quam molestie metus auctor vehicula a at nunc. Pellentesque blandit odio ac bibendum tincidunt. Quisque id scelerisque quam, et elementum massa. Integer gravida mollis enim at hendrerit. ",
+    },
+    {
+        title: "PROJECT MONITORING DEPARTMENT",
+        image: "/img/woman.png",
+        author: "Posted by John Doe 21/4/2020",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a quam molestie metus auctor vehicula a at nunc. Pellentesque blandit odio ac bibendum tincidunt. Quisque id scelerisque quam, et elementum massa. Integer gravida mollis enim at hendrerit. ",
+        to: "",
+    },
+])
 
 </script>
 
