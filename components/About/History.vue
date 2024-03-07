@@ -1,12 +1,12 @@
 <template>
-    <div class="container mt-12 py-8">
-        <div class="flex justify-between gap-16 items-end ">
+    <div class="container md:mt-12 mt-8 py-8 ">
+        <div class="flex xl:flex-row flex-col justify-between gap-8  md:gap-16 items-center xl:items-end ">
             <div class="p-4 ">
-                <img src="/img/subeb-building.png" class="w-[492px] h-[453px]" alt="">
+                <img src="/img/subeb-building.png" class="w-[233px] lg:w-[492px] lg:h-[453px] h-[250px]" alt="">
             </div>
-            <div class="flex flex-col justify-end gap-y-16">
-                <h2 class="font-bold font-dmSans text-primary text-[50px]">Our History</h2>
-                <p class="font-normal font-dmSans text-[20px] leading-[30px] ">
+            <div class="flex flex-col justify-end xl:items-start items-center gap-8  md:gap-12 xl:gap-y-16">
+                <h2 class="header-text">Our History</h2>
+                <p class="content ">
                     he Cross River State Universal Basic Education Board (SUBEB)
                     was founded in compliance with the Public Procurement Act of 2007,
                     aligning with Nigeria's national directive to establish
@@ -17,7 +17,7 @@
                 </p>
             </div>
         </div>
-        <p class="mt-8 font-normal font-dmSans text-[20px] leading-[30px]">
+        <p class=" mt-4 sm:mt-8 content">
             he Cross River State Universal Basic Education Board 
             (SUBEB) was founded in compliance with the Public Procurement 
             Act of 2007, aligning with Nigeria's national directive to 

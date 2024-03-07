@@ -1,9 +1,9 @@
 
 import type { Title } from '#build/components';
 <template>
-    <div class="bg-whiteBg">
-        <div class="bg-[#E2E8F0]">
-            <ul class="container pt-3 flex pb-0">
+    <div class="sm:bg-whiteBg ">
+        <div class="sm:bg-[#E2E8F0] bg-secondary">
+            <ul class="hidden container pt-3 sm:flex pb-0">
                 <li style="transition: all .4s ease-out;"
                     :class="
                         title === selectedTitle ? 
@@ -16,6 +16,12 @@ import type { Title } from '#build/components';
                     {{ title }}
                 </li>
             </ul>
+            <div class="container sm:hidden block py-7">
+                <div class="flex justify-content-center">
+                    <Dropdown v-model="selectedTitle" :options="items" optionLabel="label" optionValue="value"
+                        :virtualScrollerOptions="{ itemSize: 38 }" :placeholder="selectedTitle" class="w-full p-2 border-none focus:border-none focus:outline-none " />
+                </div>
+            </div>
         </div>
         <slot/>
     </div>
@@ -29,6 +35,21 @@ const tabTitles = computed(() => defaultSlot().map((tab: any) => tab.props.title
 const selectedTitle = ref(tabTitles.value[0])
 
 provide("selectedTitle", selectedTitle)
+
+const items = ref([
+    {
+        label: "Overview",
+        value: "Overview",
+    },
+    {
+        label: "Projects",
+        value: "Projects"
+    },
+    {
+        label: "Trainings",
+        value: "Trainings",
+    },
+])
 
 </script>
 

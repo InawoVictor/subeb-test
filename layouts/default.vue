@@ -17,7 +17,7 @@
                         </RouterLink>
                     </li>
                     <li 
-                        class="pl-3 font-bold bod-l cursor-pointer"
+                        class="pl-3 font-bold bod-l cursor-pointer "
                         :class="
                             isAboutMenu ?
                             'relative' :
@@ -33,21 +33,21 @@
                         <div
                             id="AboutMenu"
                             v-if="isAboutMenu"
-                            class="absolute bg-white w-[151px]
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px] 
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/about/crsubeb')"
                                 >
                                     CRSUBEB
                                 </li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/about/management')"
                                 >
                                     The Management
                                 </li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/about/departments')"
                                 >
                                     Departments
@@ -72,14 +72,14 @@
                         <div
                             id="ResourcesMenu"
                             v-if="isResourcesMenu"
-                            class="absolute bg-white w-[151px]
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm">
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm">
                                     Lesson Notes
                                 </li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/resources/emis-data')"
                                 >
                                     EMIS Report
@@ -104,19 +104,19 @@
                         <div
                             id="ProgramsMenu"
                             v-if="isProgramsMenu"
-                            class="absolute bg-white w-[151px]
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                            <ul class="text-txtWhite 2md:text-txtDark sub-items">
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/programs/Overview')"
                                 >
                                     Overview
                                 </li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/programs/Projects')"
                                 >Projects</li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/programs/Trainings')"
                                 >Trainings
                                 </li>
@@ -140,16 +140,16 @@
                         <div
                             id="MediaMenu"
                             v-if="isMediaMenu"
-                            class="absolute bg-white w-[151px]
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/media/gallery')"
                                 >
                                     Gallery
                                 </li>
-                                <li class="py-[4px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/media/news')"
                                 >
                                     News
@@ -189,7 +189,8 @@
                     <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Board</li>
                     <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Projects</li>
                     <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">
-                        Reports
+                        Reports &nbsp;
+                        <img src="/svg/download.svg" alt="">
                     </li>
                 </ul>
             </div>
@@ -311,6 +312,7 @@ const isMediaMenu = ref(false)
     border-left: 2px solid #0D99FF ;
 }
 
+
 @media screen and (max-width: 930px){
     .bod-l{
         border: none;
@@ -329,9 +331,12 @@ const isMediaMenu = ref(false)
     .nav > li:not(:last-child){        
         border-bottom: 1px solid #F3F4F6;
     }
-    /* .nav:nth-last-child(6){
-        border: none;
-    } */
+}
+
+@media screen And (max-width: 930px) {
+    .sub-items > li:not(:last-child){        
+        border-bottom: 1px solid #F3F4F6;
+    }
 }
 
 .show{

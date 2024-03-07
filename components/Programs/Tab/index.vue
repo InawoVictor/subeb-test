@@ -1,6 +1,6 @@
 
 <template>
-    <div class="container" v-show="title === selectedTitle">
+    <div class="" v-show="title === selectedTitle">
         <slot />
     </div>
 </template>
