@@ -13,6 +13,7 @@ export default {
       colors: {
         primary: "#020066",
         secondary: "#0D99FF",
+        secondary2: "#1D67B4",
         priBg: "#F5E6FE",
         txtWhite: "#ffffff",
         txtDark: "#333333",
