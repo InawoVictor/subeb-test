@@ -1,4 +1,6 @@
 <template>
-    <ResourcesHero title1="About" title2="Departments" />
-    <AboutDepartments />
+    <div>
+        <ResourcesHero title1="About" title2="Departments" />
+        <AboutDepartments />
+    </div>
 </template>

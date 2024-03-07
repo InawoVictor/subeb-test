@@ -1,13 +1,13 @@
 <template>
-        <div class="container  my-12 flex lg:flex-row flex-col-reverse justify-between gap-y-6 items">
-            <div class="lg:w-[621px] w-full flex flex-col gap-y-8">                
+        <div class="container  my-12 flex xl:flex-row flex-col-reverse justify-between gap-y-6 items-center">
+            <div class="xl:w-[621px] w-full flex flex-col gap-y-8">                
                 <div class="md:mt-5 mt-3">
                     <h2 class="header-text">
                         Etta, Inyang Eyo
                     </h2>
-                    <div class="flex gap-3">
-                        <img src="/svg/folder.svg" class="w-[50px] h-[35px]" alt="">
-                        <h3 class="font-normal text-primary text-[26px] leading-[34px]"  style="font-style: italic;">
+                    <div class="flex items-center gap-3">
+                        <img src="/svg/folder.svg" class="sm:w-[50px] w-[19px] sm:h-[35px] h-[14px]" alt="">
+                        <h3 class="font-normal text-primary text-sm sm:text-xl md:text-[26px] leading-[34px]"  style="font-style: italic;">
                             Acting Chairman/Director of Admin.Position
                         </h3>
                     </div>
