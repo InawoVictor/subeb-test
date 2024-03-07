@@ -33,10 +33,10 @@
                         <div
                             id="AboutMenu"
                             v-if="isAboutMenu"
-                            class="absolute bg-secondary2 w-[151px] 
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px] 
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite sub-items">
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
                                 <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/about/crsubeb')"
                                 >
@@ -72,10 +72,10 @@
                         <div
                             id="ResourcesMenu"
                             v-if="isResourcesMenu"
-                            class="absolute bg-secondary2 w-[151px]
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite sub-items">
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
                                 <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm">
                                     Lesson Notes
                                 </li>
@@ -104,10 +104,10 @@
                         <div
                             id="ProgramsMenu"
                             v-if="isProgramsMenu"
-                            class="absolute bg-secondary2 w-[151px]
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite sub-items">
+                            <ul class="text-txtWhite 2md:text-txtDark sub-items">
                                 <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/programs/Overview')"
                                 >
@@ -140,10 +140,10 @@
                         <div
                             id="MediaMenu"
                             v-if="isMediaMenu"
-                            class="absolute bg-secondary2 w-[151px]
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite sub-items">
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
                                 <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
                                     @click="navigateTo('/media/gallery')"
                                 >
@@ -333,8 +333,10 @@ const isMediaMenu = ref(false)
     }
 }
 
-.sub-items > li:not(:last-child){        
-    border-bottom: 1px solid #F3F4F6;
+@media screen And (max-width: 930px) {
+    .sub-items > li:not(:last-child){        
+        border-bottom: 1px solid #F3F4F6;
+    }
 }
 
 .show{
