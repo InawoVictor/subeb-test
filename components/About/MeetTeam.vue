@@ -4,7 +4,7 @@
             <h2 class="header-text xl:text-left text-center mb-12">
                 Meet the team
             </h2>
-            <ul class="grid grid-cols-[repeat(auto-fill,_minmax(385px,_1fr))] items-center justify-items-center justify-center gap-y-8">
+            <ul class="grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] items-center justify-items-center justify-center gap-8">
                 <li class="card-3" @click="navigateTo('/about/management/etta-inyang-eyo')">
                     <img src="/img/person-1.png" class="w-full h-[300px] object-cover" alt="Etta, Inyang Eyo">
                     <div class="py-4 px-6 ">

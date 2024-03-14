@@ -1,5 +1,5 @@
 <template>
-    <ul class="container grid  xl:grid-cols-[repeat(auto-fill,_minmax(566px,_1fr))] 
+    <ul class="container mb-32 grid  xl:grid-cols-[repeat(auto-fill,_minmax(566px,_1fr))] 
             sm:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] 
             grid-cols-[repeat(auto-fill,_minmax(160px,_1fr))]  
             items-center gap-8"
