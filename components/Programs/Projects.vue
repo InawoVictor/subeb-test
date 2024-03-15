@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full">
+    <div class="w-full mb-32">
         <div class=" sm:bg-whiteBg bg-secondary">
             <div class="container pt-0 pb-7 sm:pt-12 sm:pb-8">
                 <ul class="sm:flex hidden gap-3 items-center">
