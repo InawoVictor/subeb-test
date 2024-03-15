@@ -28,8 +28,24 @@ export default defineNuxtConfig({
 
   modules: [
     'nuxt-primevue',
+    '@pinia/nuxt',
     'nuxt-icon',
   ],
+
+  plugins: [
+    "~/plugins/vue-toastify.ts",
+    "~/plugins/api/index.ts"
+  ],
+
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
+
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.BASE_URL || 'https://dev.api.futurex.ng',
+    },
+  },    
 
   postcss: {
     plugins: {

@@ -56,25 +56,25 @@
     /** BUTTON **/
     .btn {
         /* @apply px-4 py-2 text-sm font-medium leading-5 text-white transition-all duration-500 ease-in-out bg-secondary border border-transparent rounded-md  focus:outline-none focus:shadow-outline-darkBgSec; */
-        @apply px-4 py-2 text-sm bg-secondary text-white cursor-pointer border border-transparent rounded-md focus:outline-none  ;
+        @apply px-4 py-2 text-sm bg-secondary text-white cursor-pointer border border-transparent focus:outline-none  ;
     }
     .btn-2{
-        @apply px-4 md:py-2 py-1 text-sm bg-transparent text-primary  rounded-md focus:outline-none cursor-pointer ;
+        @apply px-4 md:py-2 py-1 text-sm bg-transparent text-primary focus:outline-none cursor-pointer ;
         border: 1px solid transparent;
         border-image: linear-gradient(#0D99FF, #020066) 1;
         border-radius: 6px;
         overflow: hidden;
     }
     .btn-3{
-    @apply cursor-pointer py-[6px] px-[22px] border border-solid border-[#D1D5DB] rounded-[30px] font-medium font-dmSans text-lg text-[#374151];
+    @apply cursor-pointer py-[6px] px-[22px] border border-solid border-[#D1D5DB] font-medium font-dmSans text-lg text-[#374151];
     }
 
     .submit-btn{
-    @apply px-[24px] py-[12px] font-bold text-[16px] uppercase font-montserrat text-sm bg-secondary text-white cursor-pointer border border-transparent rounded-sm focus:outline-none  ;
+    @apply px-[24px] py-[12px] font-bold text-[16px] uppercase font-montserrat disabled:cursor-not-allowed text-sm bg-secondary text-white cursor-pointer border border-transparent rounded-sm focus:outline-none  ;
     }
 
     .card-2{
-        @apply md:w-[594px] w-full md:h-[237px] h-[135px] md:shadow-[0_10px_50px_2px_rgba(0,0,0,0.08)] shadow-[0_8px_40px_2px_rgba(0,0,0,0.08)] py-[36px] px-[24px] text-[#212121] rounded-[10px];
+        @apply md:w-[574px] w-full md:h-[237px] h-[135px] md:shadow-[0_10px_50px_2px_rgba(0,0,0,0.08)] shadow-[0_8px_40px_2px_rgba(0,0,0,0.08)] py-[36px] px-[24px] text-[#212121] rounded-[10px];
     }
     .card-3{
         @apply w-[385px] h-[449px] rounded-[20px] cursor-pointer shadow-[0_4px_10px_0px_rgba(0,0,0,0.06)] overflow-hidden;
@@ -90,7 +90,7 @@
     } */
     
     .input {
-        @apply border border-solid rounded-sm border-[#E0E0E0] py-[12px] px-[20px] h-[50px] focus:outline-none focus:border-gray-600 transition-all duration-200 ease-in-out placeholder:font-dmSans placeholder:font-normal placeholder:text-sm;
+        @apply border border-solid rounded-sm border-[#E0E0E0] py-[12px] px-[20px] h-[50px] focus:outline-none shadow-none focus:border-gray-600 transition-all duration-200 ease-in-out placeholder:font-dmSans placeholder:font-normal placeholder:text-sm;
       /* outline: none; */
     }
     .header-text{

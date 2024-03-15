@@ -1,5 +1,5 @@
 <template>
-    <div class="hero overflow-hidden md:mt-[-121px] mt-[-170px] relative h-[544px]">
+    <div class="hero overflow-hidden md:mt-[-177px] mt-[-220px] relative h-[544px]">
         <div class="flex flex-col items-start absolute stay-center top-[300px] lg:w-[895px]">
             <h1 class="font-inter font-[600] lg:text-[48px] md:text-[35px] text-[23px] text-txtWhite">
                 {{title1}}
