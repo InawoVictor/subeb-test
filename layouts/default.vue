@@ -1,20 +1,21 @@
 <template>
   <div>
     <!-- Header -->
-    <header class=" lg:w-[916px] w-full lg:mx-auto sticky top-[50px] z-50">
+    <div class="h-[50px] w-full bg-transparent"></div>
+    <header class=" lg:w-[916px] w-full lg:mx-auto sticky top-0 z-50">
         <div class="flex relative ">
-            <RouterLink to="/">
+            <NuxtLink to="/">
                 <div class="flex items-center sm:justify-end justify-center gap-x-2 p-1 sm:pr-6 px-6 bg-white flex-1 2md:w-[259px] cursor-pointer">
                     <img src="/img/crsubeb-logo.png" alt="Cross River SUBEB logo" class="2md:w-[83px] 2md:h-[73px] w-[63px] h-[55px]">
                     <span class="font-dmSans text-xl font-bold text-primary">CRSUBEB</span>
                 </div>
-            </RouterLink>
+            </NuxtLink>
             <div class="flex items-center justify-end 2md:bg-primary bg-secondary flex-1 2md:pr-6 sm:pr-10 pr-7 ">
                 <ul :class="showNav ? `2md:flex 2md:flex-row flex-col nav show gap-x-5 text-[12px] 2md:text-txtWhite font-dmSans`: `2md:flex 2md:flex-row flex-col nav gap-x-5 text-[12px] 2md:text-txtWhite font-dmSans`">
                     <li class="pl-3 font-bold bod-l cursor-pointer">
-                        <RouterLink to="/" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                        <NuxtLink to="/" class=" text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Home</span>
-                        </RouterLink>
+                        </NuxtLink>
                     </li>
                     <li 
                         class="pl-3 font-bold bod-l cursor-pointer "
@@ -37,17 +38,17 @@
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
                             <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/about/crsubeb')"
                                 >
                                     CRSUBEB
                                 </li>
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/about/management')"
                                 >
                                     The Management
                                 </li>
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/about/departments')"
                                 >
                                     Departments
@@ -76,10 +77,10 @@
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
                             <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm">
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm">
                                     Lesson Notes
                                 </li>
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/resources/emis-data')"
                                 >
                                     EMIS Report
@@ -108,15 +109,15 @@
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
                             <ul class="text-txtWhite 2md:text-txtDark sub-items">
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/programs/Overview')"
                                 >
                                     Overview
                                 </li>
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/programs/Projects')"
                                 >Projects</li>
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/programs/Trainings')"
                                 >Trainings
                                 </li>
@@ -144,12 +145,12 @@
                             text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
                         >
                             <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/media/gallery')"
                                 >
                                     Gallery
                                 </li>
-                                <li class="py-[6px] px-[8px] font-dmSans font-normal text-sm"
+                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
                                     @click="navigateTo('/media/news')"
                                 >
                                     News
@@ -158,9 +159,9 @@
                         </div>
                     </li>
                     <li class=" pl-3 font-bold bod-l">
-                        <RouterLink to="/contact-us" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                        <NuxtLink to="/contact-us" class=" text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Contact</span>
-                        </RouterLink>
+                        </NuxtLink>
                     </li>
                 </ul>
                 <div class="bg-primary p-2 px-4 flex 2md:hidden items-center gap-2 cursor-pointer" @click="showNav = !showNav">
@@ -188,8 +189,8 @@
                     </li>
                     <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Board</li>
                     <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Projects</li>
-                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">
-                        Reports &nbsp;
+                    <li class="text-[12px] flex gap-x-1 items-center sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">
+                        <span>Reports</span>
                         <img src="/svg/download.svg" alt="">
                     </li>
                 </ul>
@@ -198,7 +199,7 @@
     </header>
 
     <!-- Nuxt Route -->
-    <NuxtPage />
+    <slot />
 
     <!-- Footer -->
     <div class="bg-[#1F1C1C] py-10">
@@ -293,6 +294,7 @@
             </div>
         </div>
     </div>
+
   </div>
 </template>
 
@@ -333,10 +335,8 @@ const isMediaMenu = ref(false)
     }
 }
 
-@media screen And (max-width: 930px) {
-    .sub-items > li:not(:last-child){        
-        border-bottom: 1px solid #F3F4F6;
-    }
+.sub-items > li:not(:last-child){        
+    border-bottom: 1px solid #F3F4F6;
 }
 
 .show{
