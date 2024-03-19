@@ -70,16 +70,23 @@
     }
 
     .submit-btn{
-    @apply px-[24px] py-[12px] font-bold text-[16px] uppercase font-montserrat disabled:cursor-not-allowed text-sm bg-secondary text-white cursor-pointer border border-transparent rounded-sm focus:outline-none  ;
+    @apply md:px-6 px-4 md:py-3 py-2 font-bold md:text-[16px] text-[10px] uppercase font-montserrat disabled:cursor-not-allowed text-sm bg-secondary text-white cursor-pointer border border-transparent rounded-sm focus:outline-none  ;
+    }
+
+    .header-btn{
+        @apply font-normal text-[10px] py-2 text-center font-dmSans;
     }
 
     .card-2{
-        @apply md:w-[574px] w-full md:h-[237px] h-[135px] md:shadow-[0_10px_50px_2px_rgba(0,0,0,0.08)] shadow-[0_8px_40px_2px_rgba(0,0,0,0.08)] py-[36px] px-[24px] text-[#212121] rounded-[10px];
+        @apply md:w-[574px] w-full md:h-[237px] md:shadow-[0_10px_50px_2px_rgba(0,0,0,0.08)] shadow-[0_8px_40px_2px_rgba(0,0,0,0.08)] md:py-9 py-7 px-[24px] text-[#212121] rounded-[10px];
     }
     .card-3{
         @apply w-[385px] h-[449px] rounded-[20px] cursor-pointer shadow-[0_4px_10px_0px_rgba(0,0,0,0.06)] overflow-hidden;
     }
-
+    .input {
+        @apply border border-solid rounded-sm border-[#E0E0E0] md:py-3 py-2 px-2 md:px-5 md:h-[50px] h-[42px] focus:outline-none shadow-none focus:border-gray-600 transition-all duration-200 ease-in-out placeholder:font-dmSans placeholder:font-normal placeholder:text-sm text-[16px] md:text-sm;
+      /* outline: none; */
+    }
 }
 
 @layer utilities {
@@ -89,10 +96,7 @@
     
     } */
     
-    .input {
-        @apply border border-solid rounded-sm border-[#E0E0E0] py-[12px] px-[20px] h-[50px] focus:outline-none shadow-none focus:border-gray-600 transition-all duration-200 ease-in-out placeholder:font-dmSans placeholder:font-normal placeholder:text-sm;
-      /* outline: none; */
-    }
+    
     .header-text{
         @apply font-dmSans font-bold lg:text-[50px] md:text-[35px] text-[23px] text-primary leading-[25px] md:leading-[45px] lg:leading-[65px];
     }
@@ -105,9 +109,8 @@
     .card3-subheader{
         @apply text-[16px] font-dmSans font-normal;
     }
-    /* .input:focus{
-      border: none !important;
-      outline: none;
-    } */
+    .err-message {
+        @apply text-rose-500 font-medium
+    }
     
 }

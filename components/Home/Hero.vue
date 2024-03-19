@@ -1,5 +1,5 @@
 <template>
-  <div class=" md:mt-[-177px] mt-[-220px] relative md:h-[823px] h-[780px] ">
+  <div class=" md:mt-[-213px] mt-[-316px] relative md:h-[823px] h-[780px] ">
     <img src="/img/hero.png" alt="" class="w-full bg-primary h-full object-cover ">
     <div class="absolute top-[260px] w-[70%] stay-center text-txtWhite">
       <span class="lg:text-[35px] md:text-[23px] text-sm font-dmSans font-[400]">
