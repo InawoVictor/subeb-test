@@ -196,6 +196,10 @@
                 </ul>
             </div>
         </div>
+        <div class="w-[259px] flex">
+            <div class="bg-whiteBg text-primary header-btn flex-1">Login</div>
+            <div class="bg-primary text-txtWhite header-btn flex-1">Register</div>
+        </div>
     </header>
 
     <!-- Nuxt Route -->
@@ -206,7 +210,7 @@
         <div class="w-[80%] mx-auto flex flex-col gap-7 justify-between">
             <div class="flex lg:flex-row flex-col justify-between items-center md:gap-10 gap-7 ">
                 <div>
-                    <h3 class="font-bold font-dmSans lg:text-[36px] md:text-[28px] sm:text-[16px]  text-txtWhite">
+                    <h3 class="font-bold font-dmSans lg:text-[36px] md:text-[28px] sm:text-[16px] leading-9 text-txtWhite">
                         Subscribe to CRSUBEB Education Data
                     </h3>
                     <p class="text-[#D1D5DB] lg:block hidden text-sm mt-5 font-normal">
