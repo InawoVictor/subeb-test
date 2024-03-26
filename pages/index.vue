@@ -7,6 +7,7 @@
     <HomeGallery />
     <HomeReuseable title="News" :data="newsData"/>
     <HomeReuseable title="Projects" :data="projectsData"/>
+    <HomeNews />
 </template>
 
 <script setup lang="ts">

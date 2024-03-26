@@ -95,7 +95,8 @@
                 </div>
             </div>
             <div class="lg:w-[545px] w-full lg:h-[650px] h-[250px]  lg:mt-[-60px]">
-                <img src="/img/map.png" alt="" class="lg:object-contain object-cover h-full w-full">
+                <!-- <img src="/img/map.png" alt="" class="lg:object-contain object-cover h-full w-full"> -->
+                <ContactMap />
             </div>
         </div>
         <div class="flex justify-center">

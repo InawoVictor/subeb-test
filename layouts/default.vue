@@ -196,10 +196,10 @@
                 </ul>
             </div>
         </div>
-        <div class="w-[259px] flex">
+        <!-- <div class="w-[259px] flex">
             <div class="bg-whiteBg text-primary header-btn flex-1">Login</div>
             <div class="bg-primary text-txtWhite header-btn flex-1">Register</div>
-        </div>
+        </div> -->
     </header>
 
     <!-- Nuxt Route -->
@@ -259,7 +259,7 @@
                     <span class="font-avenir font-[900] text-sm text-[#E0E0E0]">
                         Follow us on
                     </span>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center">
                         <span class="">
                             <Icon 
                                 name="basil:facebook-solid"                                 
@@ -267,34 +267,16 @@
                                 class=" p-2 border border-solid border-white rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]"
                             />
                         </span>
-                        <span>
-                            <Icon name="ant-design:instagram-outlined" 
-                                width="45" height="45" 
-                                color="white" 
-                                class=" p-2 border border-solid border-white rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]"
-                            />
-                        </span>
-                        <span>
-                            <Icon name="akar-icons:linkedin-fill" 
-                                width="45" height="45" 
-                                color="white" 
-                                class=" p-2 border border-solid border-white rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]"
-                            />
-                        </span>
-                        <span>
-                            <Icon name="ri:twitter-fill" 
-                                width="45" height="45" 
-                                color="white" 
-                                class=" p-2 border border-solid border-white rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]"
-                            />
-                        </span>
                     </div>
                 </div>
             </div>
-            <div class="lg:self-end self-center">
-                <span class="font-avenir font-[900] lg:text-[16px] md:text-sm text-[8px] text-[#E0E0E0]">
-                    Powered by Future-X
-                </span>
+            <div class="lg:self-end self-center flex gap-x-1 items-center">
+                <p class="font-avenir font-[900] lg:text-[16px] md:text-sm text-[8px] text-[#E0E0E0]">
+                    Powered by <span class="text-[#6AB43E]">Future-</span><span class="text-[#195176]">X</span>
+                </p>
+                <div class="w-[45px] h-[45px] rounded-full bg-whiteBg flex items-center justify-center">
+                    <img src="/svg/futurex-logo.svg" class="w-[23px] h-[28px]" alt="">
+                </div>
             </div>
         </div>
     </div>
