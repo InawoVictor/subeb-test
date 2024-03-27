@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     'nuxt-primevue',
     '@pinia/nuxt',
     'nuxt-icon',
+    'nuxt3-leaflet'
   ],
 
   plugins: [
