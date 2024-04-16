@@ -2,7 +2,9 @@
 <div class="container-2 py-14 font-dmSans">
     <div class="flex justify-between items-center py-4 bor-b">
         <span class=" font-dmSans font-[500] text-[34px] text-primary">Gallery</span>
-        <span class="font-dmSans text-primary font-normal text-[17px]">See more</span>
+        <NuxtLink to="/media/gallery">
+            <span class="font-dmSans text-primary font-normal text-[17px]">See More</span>
+        </NuxtLink>
     </div>
     <div class="mt-9 lg:flex hidden justify-between items-center ">
         <img src="/img/subeb-group-1.png" class="object-cover w-[200px] xl:w-[247px] h-[186px]" alt="">

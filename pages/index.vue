@@ -5,9 +5,11 @@
     <HomeAbout />
     <HomeObjective />
     <HomeGallery />
-    <HomeReuseable title="News" :data="newsData"/>
-    <HomeReuseable title="Projects" :data="projectsData"/>
-    <HomeNews />
+    <div v-if="projects && news">
+        <HomeReuseable title="News" :data="newsData"/>
+        <HomeReuseable title="Projects" :data="projectsData"/>
+    </div>
+    <NoContent title="Latest News" subtitle="No News Yet" v-else/>
 </template>
 
 <script setup lang="ts">
@@ -63,6 +65,9 @@ const projectsData = ref([
         info: "In a bid to ensure quality education in primary and secondary schools cross the states, the ministry of education in collaboration with NAPSS..."
     },
 ]);
+
+const projects = ref(null);
+const news = ref(null);
 </script>
 
 <style scoped>
