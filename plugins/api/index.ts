@@ -1,5 +1,6 @@
 import axios from "axios";
-import Contact from "./contact"; // Import the User API function
+import Contact from "./contact";
+import Gallery from "./contact";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
@@ -14,8 +15,10 @@ export default defineNuxtPlugin((nuxtApp) => {
   });
 
   // Extend the API object with custom API functions
+  // Pass the shared Axios instance to User API function
   const init = {
-    contact: Contact(api), // Pass the shared Axios instance to User API function
+    contact: Contact(api), 
+    gallery: Gallery(api), 
   };
 
   // Provide the extended API object for global access

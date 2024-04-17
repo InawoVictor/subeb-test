@@ -34,7 +34,7 @@
                     </p>
                 </li>
             </ul>            
-            <button v-if="isButton" class="btn-2 md:mt-10 mt-6  flex items-center gap-2">
+            <button @click="navigateTo('/about/crsubeb')" v-if="isButton" class="btn-2 md:mt-10 mt-6  flex items-center gap-2">
                 <span class="font-[500] lg:text-[16px] md:text-sm text-[7px]">Read more</span>
                 <Icon name="mingcute:arrow-right-line" width="16" color="#020066"/>
             </button>
