@@ -17,7 +17,7 @@
             potential of every learner and build a brighter 
             tomorrow for Cross River State!
         </p>
-        <button v-if="isButton" class="btn-2 md:mt-10 mt-6  flex items-center gap-2">
+        <button v-if="isButton" class="btn-2 md:mt-10 mt-6 flex items-center gap-2" @click="navigateTo('/about/management/etta-inyang-eyo')">
             <span class="font-[500] lg:text-[16px] md:text-sm text-[7px]">Read more</span>
             <Icon name="mingcute:arrow-right-line" width="16" color="#020066"/>
         </button>
@@ -35,6 +35,8 @@
 </template>
 
 <script setup lang="ts">
+// const router = useRouter()
+
 const props = defineProps({
     isButton: {
         type: Boolean,

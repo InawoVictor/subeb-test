@@ -20,7 +20,7 @@
         Join us in our mission to unlock the full 
         potential of every learner and build a brighter tomorrow for Cross River State!
       </p>
-      <button class="btn mt-10 font-inter font-[500] text-[7px] md:text-sm lg:text-[16px] lg:px-[32px] md:px-6 px-4 lg:py-[16px] md:py-3 py-2">
+      <button @click="navigateTo('/about/management')" class="btn mt-10 font-inter font-[500] text-[7px] md:text-sm lg:text-[16px] lg:px-[32px] md:px-6 px-4 lg:py-[16px] md:py-3 py-2">
         Learn more
       </button>
     </div>

@@ -11,7 +11,7 @@
         <Carousel class="lg:hidden flex mt-9" :value="data" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
                 <div class="md:w-[350px] sm:w-[240px] flex-wrap shadow">
-                <img :src="slotProps.data.img" class=" w-full object-cover" height="140" alt="">
+                <img :src="slotProps.data.img" class=" w-full object-cover h-[140px]"  alt="">
                 <div class="bg-white p-3">
                     <span class="capitalize font-dmSans text-primary text-[12px] font-normal">
                         {{slotProps.data.date}}

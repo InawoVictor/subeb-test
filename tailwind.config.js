@@ -28,7 +28,8 @@ export default {
         avenir: ["Sen", "sans-serif"],
         dmSans: ["DM Sans", "sans-serif"],
         workSans: ["Work Sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"]
+        montserrat: ["Montserrat", "sans-serif"],
+        arimo: ["Arimo", "sans-serif"],
       },
       fontSize: {
         nl: ["56px", "64px"],
