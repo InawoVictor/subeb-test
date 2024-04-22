@@ -56,7 +56,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li 
+                    <!-- <li 
                         class="pl-3 font-bold bod-l cursor-pointer relative"
                         @mouseenter="isResourcesMenu= true"
                         @mouseleave="isResourcesMenu= false"
@@ -75,12 +75,6 @@
                             text-[#333333] z-40 top-0 2md:top-[19px] 2md:left-[0] right-[-151px]"
                         >
                             <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
-                                <!-- <li 
-                                class="py-2 px-3 font-dmSans font-normal text-sm 
-                                    2md:hover:text-primary hover:text-gray-300"
-                                >
-                                    Lesson Notes
-                                </li> -->
                                 <li 
                                     class="py-2 px-3 font-dmSans font-normal text-sm 
                                     2md:hover:text-primary hover:text-gray-300"
@@ -90,12 +84,15 @@
                                 </li>
                             </ul> 
                         </div>
-                    </li>
+                    </li> -->
                     <li 
-                        class="pl-3 font-bold bod-l cursor-pointer relative"                       
+                        class=" cursor-pointer relative"                       
                         @mouseleave="isProgramsMenu= false"
                     >
-                        <div 
+                        <NuxtLink to="/programs" class="pl-3 font-bold bod-l">
+                            <span class="text-txtWhite">Programs</span>
+                        </NuxtLink>
+                        <!-- <div 
                             @mouseenter="isProgramsMenu= true"
                             class="text-txtWhite gap-x-3 flex justify-between items-center"
                         >
@@ -128,7 +125,7 @@
                                 >Trainings
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </li>
                     <li 
                         class="pl-3 font-bold bod-l cursor-pointer relative"
@@ -192,7 +189,7 @@
                     </li>
                     <!-- <li class="text-[12px] sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">Board</li> -->
                     <li class="text-[12px] sm:px-0 px-2 font-normal sm:font-medium uppercase text-black hover:text-primary font-dmSans cursor-pointer">
-                        <NuxtLink to="/programs/Projects">Projects</NuxtLink>
+                        <NuxtLink to="/programs">Projects</NuxtLink>
                     </li>
                     <!-- <li class="text-[12px] flex gap-x-1 items-center sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">
                         <span>Reports</span>
@@ -286,6 +283,7 @@
         </div>
     </div>
 
+    <DialogLoading />
   </div>
 </template>
 

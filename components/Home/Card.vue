@@ -3,7 +3,7 @@
         <img :src="img" class=" w-full object-cover" height="140" alt="">
         <div class="bg-white p-3">
             <span class="capitalize font-dmSans text-primary text-[12px] font-normal">
-                {{date}}
+                {{useFormatDate(date)}}
             </span>
             <h3 class="font-dmSans text-primary font-bold text-sm">
                 {{ title }}

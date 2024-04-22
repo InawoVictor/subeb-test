@@ -46,8 +46,8 @@
                 sm:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] 
             grid-cols-[repeat(auto-fill,_minmax(160px,_1fr))] 
             items-center gap-8">
-            <li class="projects-card" v-for="(trainingCard, index) in trainingsCard" :key="index">
-                <img :src="trainingCard.image" class="w-full lg:h-[340px] md:h-[200px] sm:h-[150px] h-[104px] xl:object-contain object-cover" alt="Etta, Inyang Eyo">
+            <li class="projects-card" v-for="(trainingCard) in data" :key="trainingCard.id">
+                <img :src="trainingCard.blogCoverImage" class="w-full lg:h-[340px] md:h-[200px] sm:h-[150px] h-[104px] xl:object-contain object-cover" alt="Project blogCoverImage">
                 <div class="md:py-6 py-2 px-2 md:px-4 ">
                     <h3 class="truncate pb-1 font-bold font-dmSans text-txtDark2 md:text-[30px] sm:text-xl text-[10px] md:leading-35 sm:leading-[28px] leading-[13px]">
                         {{trainingCard.title}}
@@ -68,11 +68,18 @@
 </style>
 
 <script lang="ts" setup>
-interface training {
-    image: string,
+interface Training {
+    id: string,
+    blogCoverImage: string,
     title: string,
     content: string,
 }
+const props = defineProps({
+    data: {
+        type: Array as () => Training[],
+        required: true,
+    }
+})
 
 const selectedStage = ref("All")
 const items = ref([

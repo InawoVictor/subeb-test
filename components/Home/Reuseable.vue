@@ -5,22 +5,22 @@
             <span class="font-dmSans text-primary font-normal text-[17px]">See more</span>
         </div>
         <div  class="mt-9 lg:flex hidden justify-between gap-4 items-center ">
-            <HomeCard v-for="(item, index) in data" :key="index" :title="item.title" :img="item.img" :date="item.date" :info="item.info" />
+            <HomeCard v-for="(item, index) in data" :key="index" :title="item.title" :img="item.blogCoverImage" :date="item.dateCreated" :info="item.content" />
         </div>
 
         <Carousel class="lg:hidden flex mt-9" :value="data" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
                 <div class="md:w-[350px] sm:w-[240px] flex-wrap shadow">
-                <img :src="slotProps.data.img" class=" w-full object-cover h-[140px]"  alt="">
+                <img :src="slotProps.data.blogCoverImage" class=" w-full object-cover h-[140px]"  alt="">                
                 <div class="bg-white p-3">
                     <span class="capitalize font-dmSans text-primary text-[12px] font-normal">
-                        {{slotProps.data.date}}
+                        {{useFormatDate(slotProps.data.dateCreated)}}
                     </span>
                     <h3 class="font-dmSans text-primary font-bold text-sm">
                         {{slotProps.data.title}}
                     </h3>
                     <p class="mt-1 text-[#212121] font-dmSans font-normal text-sm">
-                        {{slotProps.data.info}}
+                        {{slotProps.data.content}}
                     </p>
                     <button class="btn bg-primary mt-10  flex items-center gap-2">
                         <span class="font-[500] text-[16px]">Read more</span>

@@ -62,8 +62,8 @@
             sm:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] 
             grid-cols-[repeat(auto-fill,_minmax(160px,_1fr))] 
             items-center gap-8">
-            <li class="projects-card" v-for="(projectCard, index) in projectsCard" :key="index">
-                <img :src="projectCard.image" class="w-full lg:h-[340px] md:h-[200px] sm:h-[150px] h-[104px] object-cover" alt="Etta, Inyang Eyo">
+            <li class="projects-card" v-for="projectCard in data" :key="projectCard.id">
+                <img :src="projectCard.blogCoverImage" class="w-full lg:h-[340px] md:h-[200px] sm:h-[150px] h-[104px] object-cover" alt="Project Image">
                 <div class="md:py-6 py-2 px-2 md:px-4 ">
                     <h3 class="truncate pb-1 font-bold font-dmSans text-txtDark2 md:text-[30px] sm:text-xl text-[10px] md:leading-35 sm:leading-[28px] leading-[13px]">
                         {{projectCard.title}}
@@ -84,11 +84,23 @@
 </style>
 
 <script lang="ts" setup>
-interface project {
-    image: string,
+interface Project {
+    id: string,
+    blogCoverImage: string,
     title: string,
     content: string,
 }
+const props = defineProps({
+    data: {
+        type: Array as () => Project[],
+        required: true,
+    }
+})
+// interface project {
+//     image: string,
+//     title: string,
+//     content: string,
+// }
 const selectedYear = ref("2024")
 
 const items = ref([
@@ -118,36 +130,36 @@ const items = ref([
     },
 ])
 
-const projectsCard =ref<project[]>([
-    {
-        image: "/img/subeb-building.png",
-        title: "Quality Education Enhancement Program",
-        content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
-    },
-    {
-        image: "/img/classroom-2.png",
-        title: "School Infrastructure Development Project",
-        content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
-    },
-    {
-        image: "/img/chairman-2.png",
-        title: "Teacher Capacity Building Scheme",
-        content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
-    },
-    {
-        image: "/img/students-teacher.png",
-        title: "Quality Education Enhancement Program",
-        content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
-    },
-    {
-        image: "/img/students-teacher-2.png",
-        title: "Teacher Capacity Building Scheme",
-        content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
-    },
-    {
-        image: "/img/students.png",
-        title: "Quality Education Enhancement Program",
-        content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
-    },
-])
+// const projectsCard =ref<project[]>([
+//     {
+//         image: "/img/subeb-building.png",
+//         title: "Quality Education Enhancement Program",
+//         content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
+//     },
+//     {
+//         image: "/img/classroom-2.png",
+//         title: "School Infrastructure Development Project",
+//         content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
+//     },
+//     {
+//         image: "/img/chairman-2.png",
+//         title: "Teacher Capacity Building Scheme",
+//         content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
+//     },
+//     {
+//         image: "/img/students-teacher.png",
+//         title: "Quality Education Enhancement Program",
+//         content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
+//     },
+//     {
+//         image: "/img/students-teacher-2.png",
+//         title: "Teacher Capacity Building Scheme",
+//         content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
+//     },
+//     {
+//         image: "/img/students.png",
+//         title: "Quality Education Enhancement Program",
+//         content: "Improve overall education quality through curriculum development, teacher training, and enhanced learning materials.",
+//     },
+// ])
 </script>

@@ -11,7 +11,7 @@ import type { Title } from '#build/components';
                         'py-5 px-8 cursor-pointer'
                     "
                     v-for="title in tabTitles" :key="title"
-                    @click="selectedTitle = title"
+                    @click="selectTitle(title)"
                 >
                     {{ title }}
                 </li>
@@ -28,19 +28,25 @@ import type { Title } from '#build/components';
 </template>
 
 <script setup lang="ts">
+const emit = defineEmits(['update:title'])
 const props = defineProps(['title']);
 const { default: defaultSlot } = defineSlots();
 const tabTitles = computed(() => defaultSlot().map((tab: any) => tab.props.title));
 
 const selectedTitle = ref(tabTitles.value[0])
+const selectTitle = (title: string) => {
+    selectedTitle.value = title
+    emit('update:title', title)
+}
+
 
 provide("selectedTitle", selectedTitle)
 
 const items = ref([
-    {
-        label: "Overview",
-        value: "Overview",
-    },
+    // {
+    //     label: "Overview",
+    //     value: "Overview",
+    // },
     {
         label: "Projects",
         value: "Projects"
