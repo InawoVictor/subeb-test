@@ -4,7 +4,7 @@
             <div class="flex flex-col md:gap-y-8 xl:items-start items-center gap-y-5 flex-1">
                 <span class="header-text">The Management</span>
                 <p class="content">
-                    020066It gives me great pleasure to serve as the Hon. 
+                    It gives me great pleasure to serve as the Hon. 
                     Commissioner for Quality Education, especially in such a 
                     great time as this, to guide this great agency toward 
                     the next phase of notable change, improvement and overall 
