@@ -21,8 +21,11 @@
                 </p>
             </div>
             <div>
-                <img src="/img/person-2.png" class="w-[233px] lg:w-[492px] lg:h-[453px] h-[250px]" alt="">
+                <img src="/img/management.png" class="w-[233px] sm:w-[400px] lg:w-[492px] sm:h-[350px] lg:h-[453px] h-[250px]" alt="">
             </div>
         </div>
+        <!-- <div class="container">
+            <img src="/img/management.png" class="w-full object-contain h-[453px] " alt="The management">
+        </div> -->
     </div>
 </template>

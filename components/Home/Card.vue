@@ -1,6 +1,6 @@
 <template>
-    <div class="w-[400px] flex-wrap shadow">
-        <img :src="img" class=" w-full object-cover" height="140" alt="">
+    <div class="min-w-[300px] h-[290px] flex-wrap shadow">
+        <img :src="img" class=" w-full object-cover h-[140px]" alt="">
         <div class="bg-white p-3">
             <span class="capitalize font-dmSans text-primary text-[12px] font-normal">
                 {{useFormatDate(date)}}

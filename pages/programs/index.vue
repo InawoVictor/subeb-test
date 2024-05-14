@@ -2,11 +2,11 @@
     <ResourcesHero title1="Programs" :title2="selectedTab"/>
     <ProgramsTabWrapper @update:title="getSelectedTab">
         <ProgramsTab title="Projects">
-            <ProgramsProjects v-if="projectsData.length >= 1" :data="projectsData"/>
+            <ProgramsProjects v-if="projectsData" :data="projectsData.projects"/>
             <NoContent v-else subtitle="No Content Available"/>
         </ProgramsTab>
         <ProgramsTab title="Trainings">
-            <ProgramsTrainings v-if="trainingsData.length >= 1" :data="trainingsData"/>
+            <ProgramsTrainings v-if="trainingsData" :data="trainingsData.trainings"/>
             <NoContent v-else subtitle="No Content Available"/>
         </ProgramsTab>
     </ProgramsTabWrapper>
@@ -34,8 +34,8 @@ interface Training {
 const route = useRoute()
 const projects = useProjectsStore()
 const trainings = useTrainingsStore()
-const projectsData = ref<Project[]>([])
-const trainingsData = ref<Training[]>([])
+const projectsData = ref(null)
+const trainingsData = ref(null)
 const selectedTab = ref("Projects")
 
 const getSelectedTab = (value: string) => {

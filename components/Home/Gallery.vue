@@ -6,7 +6,7 @@
             <span class="font-dmSans text-primary font-normal text-[17px]">See More</span>
         </NuxtLink>
     </div>
-    <div class="mt-9 lg:flex hidden justify-between items-center ">
+    <div class="mt-9 lg:flex hidden gap-3 justify-between items-center ">
         <img src="/img/subeb-group-1.png" class="object-cover w-[200px] xl:w-[247px] h-[186px]" alt="">
         <img src="/img/gallery.png" class="object-cover w-[200px] xl:w-[247px] h-[186px]" alt="">
         <img src="/img/students-3.png" class="object-cover w-[200px] xl:w-[247px] h-[186px]" alt="">
@@ -14,7 +14,7 @@
     </div>
     <Carousel class="lg:hidden flex mt-9 justify-center" :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
         <template #item="slotProps">
-            <img :src="slotProps.data.img" class="md:w-[350px] sm:w-[240px] w-full object-cover" height="186" alt="">
+            <img :src="slotProps.data.img" class="md:w-[300px] sm:w-[240px] w-full object-cover" height="186" alt="">
         </template>
     </Carousel>
 </div>

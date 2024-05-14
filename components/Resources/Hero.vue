@@ -1,10 +1,10 @@
 <template>
     <div class="hero overflow-hidden md:mt-[-213px] mt-[-316px] relative h-[544px]">
-        <div class="flex flex-col items-start absolute stay-center top-[300px] lg:w-[895px]">
+        <div class="flex flex-col items-start absolute stay-center top-[75%] sm:top-[70%] md:top-[300px] lg:w-[895px]">
             <h1 class="font-inter font-[600] lg:text-[48px] md:text-[35px] text-[23px] text-txtWhite">
                 {{title1}}
             </h1>
-            <p class="text-txtWhite lg:mt-12 mt-8 font-medium md:text-xl text-sm font-inter">
+            <p class="text-txtWhite lg:mt-12 sm:mt-8 mt-4 font-medium md:text-xl text-sm font-inter">
                 <RouterLink class="text-txtWhite font-medium text-xl font-inter" to="/resources">{{title1}} / </RouterLink>
                 <span>{{title2}}</span> 
                 <span v-if="title3"> / {{title3}}</span> 

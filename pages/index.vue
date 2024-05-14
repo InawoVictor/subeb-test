@@ -5,12 +5,16 @@
     <HomeAbout />
     <HomeObjective />
     <HomeGallery />
-    <div v-if="projects && news">
-        <HomeReuseable title="News" :data="news" v-if="news.length >= 1"/>
+    <div>
+        <div v-if="newsData ">
+            <HomeNewsCard title="News" :data="newsData?.news" />
+        </div>
         <NoContent title="Latest News"  subtitle="No News Yet" v-else/>
     </div>
     <div >
-        <HomeReuseable title="Projects" :data="projectsData" v-if="projectsData.length >= 1"/>
+        <div  v-if="projectsData">
+            <HomeProjectCard title="Projects" :data="projectsData?.projects"/>
+        </div>
         <NoContent  subtitle="No Projects Yet" v-else/>
     </div>
 </template>
@@ -33,17 +37,19 @@ interface News {
     updatedAt: string;
 }
 
+
+
 const projects = useProjectsStore()
 const newsStore = useNewsStore()
-const projectsData = ref<Project[]>([]);
-const news = ref<News[]>([])
+const projectsData = ref(null);
+const newsData = ref(null)
 
 const loadProjects = async () => {
     projectsData.value = await projects.getProjects();
 }
 
 const loadNews = async () => {
-    news.value = await newsStore.getNews();
+    newsData.value = await newsStore.getNews();
 }
 
 onMounted(() => {
