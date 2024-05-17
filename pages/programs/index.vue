@@ -2,11 +2,18 @@
     <ResourcesHero title1="Programs" :title2="selectedTab"/>
     <ProgramsTabWrapper @update:title="getSelectedTab">
         <ProgramsTab title="Projects">
-            <ProgramsProjects v-if="projectsData" :data="projectsData.projects"/>
+            <ProgramsProjects 
+                v-if="projectsData && projectsData.length >= 1" :data="projectsData"
+                @update:year="filterProjects"
+            />
             <NoContent v-else subtitle="No Content Available"/>
         </ProgramsTab>
         <ProgramsTab title="Trainings">
-            <ProgramsTrainings v-if="trainingsData" :data="trainingsData.trainings"/>
+            <ProgramsTrainings 
+                v-if="trainingsData && trainingsData.length >= 1" 
+                :data="trainingsData"
+                @update:status="filterTrainings"
+            />
             <NoContent v-else subtitle="No Content Available"/>
         </ProgramsTab>
     </ProgramsTabWrapper>
@@ -30,12 +37,10 @@ interface Training {
     datePublished: string;
     updatedAt: string;
 }
-
-const route = useRoute()
 const projects = useProjectsStore()
 const trainings = useTrainingsStore()
-const projectsData = ref(null)
-const trainingsData = ref(null)
+const projectsData = ref<any>(null)
+const trainingsData = ref<any>(null)
 const selectedTab = ref("Projects")
 
 const getSelectedTab = (value: string) => {
@@ -44,12 +49,27 @@ const getSelectedTab = (value: string) => {
 }
 
 const loadProjects = async () => {
-    projectsData.value = await projects.getProjects();
-    console.log("projects", projectsData.value)
+    let data: any = await projects.getProjects();
+    projectsData.value = data.projects;
+    // console.log("projects", projectsData.value)
 }
 const loadTrainings = async () => {
-    trainingsData.value = await trainings.getTrainings();
-    console.log("projects", trainingsData.value)
+    let data: any = await trainings.getTrainings();
+    trainingsData.value = data.trainings
+    // console.log("projects", trainingsData.value)
+}
+
+const filterProjects = async (year: string) => {
+    // console.log("filtered year", year)
+    let data: any = await projects.filterProjectsYear(year);
+    projectsData.value = data.foundPost
+}
+
+const filterTrainings = async (status: string) => {
+    // console.log("filtered status", status)
+    let data: any = await trainings.filterTrainingsStatus(status);
+    trainingsData.value = data.foundPost
+    // console.log("training filter", trainingsData.value);
 }
 
 watch(selectedTab, (newValue: string) => {

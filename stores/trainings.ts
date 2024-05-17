@@ -25,8 +25,42 @@ export const useTrainingsStore = defineStore('trainings', () => {
                 dialog.closeLoading();
                 resolve(response.data);
             }).catch((error: AxiosError) => {
+                dialog.closeLoading();
                 reject(error.message || "An error occurred. Please try again later.");
-                    toast.error(
+                toast.error(
+                    error.message || "An error occurred. Please try again later."
+                );
+            })
+        });
+    }
+
+    function getSingleTraining(id: string) {
+        return new Promise((resolve, reject) => {
+            dialog.showLoading("Loading Projects...");
+        
+            nuxtApp.$api.trainings.getSingleTraining(id).then((response: AxiosResponse) => {
+                dialog.closeLoading();
+                resolve(response.data);
+            }).catch((error: AxiosError) => {
+                dialog.closeLoading();
+                reject(error.message || "An error occurred. Please try again later.");
+                toast.error(
+                    error.message || "An error occurred. Please try again later."
+                );
+            })
+        });
+    }
+    function filterTrainingsStatus(status: string) {
+        return new Promise((resolve, reject) => {
+            dialog.showLoading("Loading Projects...");
+        
+            nuxtApp.$api.trainings.filterTrainingsStatus(status).then((response: AxiosResponse) => {
+                dialog.closeLoading();
+                resolve(response.data);
+            }).catch((error: AxiosError) => {
+                dialog.closeLoading();
+                reject(error.message || "An error occurred. Please try again later.");
+                toast.error(
                     error.message || "An error occurred. Please try again later."
                 );
             })
@@ -34,6 +68,8 @@ export const useTrainingsStore = defineStore('trainings', () => {
     }
 
     return {
-        getTrainings
+        getTrainings,
+        getSingleTraining,
+        filterTrainingsStatus
     }
 })

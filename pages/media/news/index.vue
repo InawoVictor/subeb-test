@@ -1,7 +1,7 @@
 <template>
     <ResourcesHero title1="Media" title2="News"/>
-    <div>
-        <MediaNews v-if="news.length >= 1" :data="news"/>
+    <div v-if="news">
+        <MediaNewsList v-if="news.news.length >= 1" :data="news.news"/>
         <NoContent v-else subtitle="No News Available"/>
     </div>
 </template>
@@ -18,7 +18,7 @@ interface News {
 }
 
 const newsStore = useNewsStore()
-const news = ref<News[]>([])
+const news = ref(null);
 
 const loadNews = async () => {
     news.value = await newsStore.getNews();
@@ -27,7 +27,7 @@ const loadNews = async () => {
 
 onMounted(() => {
     loadNews()
-})
+});
 
 
 </script>

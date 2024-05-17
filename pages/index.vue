@@ -4,7 +4,12 @@
     <HomeTraction/>
     <HomeAbout />
     <HomeObjective />
-    <HomeGallery />
+    <div>
+        <div v-if="galleryData && galleryData.gallery.length >= 1">
+            <HomeGallery :data="galleryData.gallery"/>
+        </div>
+        <NoContent  subtitle="No Gallery Yet" v-else/>
+    </div>
     <div>
         <div v-if="newsData ">
             <HomeNewsCard title="News" :data="newsData?.news" />
@@ -39,10 +44,12 @@ interface News {
 
 
 
-const projects = useProjectsStore()
-const newsStore = useNewsStore()
-const projectsData = ref(null);
-const newsData = ref(null)
+const projects = useProjectsStore();
+const newsStore = useNewsStore();
+const gallery = useGalleryStore();
+const projectsData = ref<any>(null);
+const newsData = ref<any>(null)
+const galleryData = ref<any>(null)
 
 const loadProjects = async () => {
     projectsData.value = await projects.getProjects();
@@ -52,9 +59,15 @@ const loadNews = async () => {
     newsData.value = await newsStore.getNews();
 }
 
+const loadGallery = async () => {
+    galleryData.value = await gallery.getGallery();
+    // console.log("gallery", galleryData.value)
+}
+
 onMounted(() => {
-    loadProjects()
-    loadNews()
+    loadProjects();
+    loadNews();
+    loadGallery();
     // loadTrainings()
 })
 </script>

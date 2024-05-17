@@ -17,7 +17,7 @@ export const useNewsStore = defineStore('news', () => {
 
     function getNews() {
         return new Promise<News[]>((resolve, reject) => {
-            dialog.showLoading("Loading Projects...");
+            dialog.showLoading("Loading News...");
         
             nuxtApp.$api.news.getNews().then((response: AxiosResponse) => {
                 dialog.closeLoading();
@@ -27,11 +27,29 @@ export const useNewsStore = defineStore('news', () => {
                     toast.error(
                     error.message || "An error occurred. Please try again later."
                 );
-            })
+            });
+        });
+    }
+
+    function getSingleNews(id: string) {
+        return new Promise((resolve, reject) => {
+            dialog.showLoading("Loading News...");
+        
+            nuxtApp.$api.news.getSingleNews(id).then((response: AxiosResponse) => {
+                dialog.closeLoading();
+                resolve(response.data);
+            }).catch((error: AxiosError) => {
+                reject(error.message || "An error occurred. Please try again later.");
+                toast.error(
+                    error.message || "An error occurred. Please try again later."
+                );
+                dialog.closeLoading();
+            });
         });
     }
 
     return {
-        getNews
+        getNews,
+        getSingleNews,
     }
 })

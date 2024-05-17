@@ -24,8 +24,9 @@ export const useGalleryStore = defineStore('gallery', () => {
                 dialog.closeLoading();
                 resolve(response.data);
             }).catch((error: AxiosError) => {
+                dialog.closeLoading();
                 reject(error.message || "An error occurred. Please try again later.");
-                    toast.error(
+                toast.error(
                     error.message || "An error occurred. Please try again later."
                 );
             })

@@ -17,7 +17,7 @@ const loadGallery = async () => {
 
 onMounted(() => {
     loadGallery()
-})
+});
 
 
 </script>

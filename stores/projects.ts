@@ -20,8 +20,42 @@ export const useProjectsStore = defineStore('projects', () => {
                 dialog.closeLoading();
                 resolve(response.data);
             }).catch((error: AxiosError) => {
+                dialog.closeLoading();
                 reject(error.message || "An error occurred. Please try again later.");
-                    toast.error(
+                toast.error(
+                    error.message || "An error occurred. Please try again later."
+                );
+            })
+        });
+    }
+
+    function getSingleProject(id: string) {
+        return new Promise<Project[]>((resolve, reject) => {
+            dialog.showLoading("Loading Projects...");
+        
+            nuxtApp.$api.projects.getSingleProject(id).then((response: AxiosResponse) => {
+                dialog.closeLoading();
+                resolve(response.data);
+            }).catch((error: AxiosError) => {
+                dialog.closeLoading();
+                reject(error.message || "An error occurred. Please try again later.");
+                toast.error(
+                    error.message || "An error occurred. Please try again later."
+                );
+            })
+        });
+    }
+
+    function filterProjectsYear(year: string) {
+        return new Promise<Project[]>((resolve, reject) => {
+            dialog.showLoading("Loading Projects...");        
+            nuxtApp.$api.projects.filterProjectYear(year).then((response: AxiosResponse) => {
+                dialog.closeLoading();
+                resolve(response.data);
+            }).catch((error: AxiosError) => {
+                dialog.closeLoading();
+                reject(error.message || "An error occurred. Please try again later.");
+                toast.error(
                     error.message || "An error occurred. Please try again later."
                 );
             })
@@ -29,6 +63,8 @@ export const useProjectsStore = defineStore('projects', () => {
     }
 
     return {
-        getProjects
+        getProjects,
+        getSingleProject,
+        filterProjectsYear,
     }
 })

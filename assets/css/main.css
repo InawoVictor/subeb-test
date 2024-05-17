@@ -95,10 +95,14 @@
     .card-4{
         @apply h-[449px] rounded-[20px] cursor-pointer shadow-[0_4px_10px_0px_rgba(0,0,0,0.06)] overflow-hidden;
     }
+    .projects-card {
+        @apply w-full lg:h-[530px] sm:h-[400px] h-[250px] hover:translate-y-[-3px] transition-all duration-300 ease-out  md:rounded-[20px] rounded-[10px] cursor-pointer shadow-[0_4px_10px_0px_rgba(0,0,0,0.06)] overflow-hidden;
+    }
     .input {
         @apply border border-solid rounded-sm border-[#E0E0E0] md:py-3 py-2 px-2 md:px-5 md:h-[50px] h-[42px] focus:outline-none shadow-none focus:border-gray-600 transition-all duration-200 ease-in-out placeholder:font-dmSans placeholder:font-normal placeholder:text-sm text-[16px] md:text-sm;
       /* outline: none; */
     }
+
 }
 
 @layer utilities {
@@ -128,7 +132,7 @@
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3; /* number of lines to show */
-                line-clamp: 3; 
+        line-clamp: 3; 
         -webkit-box-orient: vertical;
-     }
+    }
 }

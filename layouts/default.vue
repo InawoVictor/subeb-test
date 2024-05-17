@@ -12,7 +12,7 @@
             </NuxtLink>
             <div class="flex items-center justify-end 2md:bg-primary bg-secondary flex-1 2md:pr-6 sm:pr-10 pr-7 ">
                 <ul :class="showNav ? `2md:flex 2md:flex-row flex-col nav show gap-x-5 text-[12px] 2md:text-txtWhite font-dmSans`: `2md:flex 2md:flex-row flex-col nav gap-x-5 text-[12px] 2md:text-txtWhite font-dmSans`">
-                    <li class="pl-3 font-bold bod-l cursor-pointer">
+                    <li class="pl-3 font-bold bod-l cursor-pointer" @click="showNav = !showNav">
                         <NuxtLink to="/" class=" text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Home</span>
                         </NuxtLink>
@@ -31,7 +31,7 @@
                             class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px] top-0 2md:top-[19px]
                             text-[#333333] z-40  2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite  2md:text-txtDark  2md:txt-Dark sub-items">
+                            <ul @click="showNav = !showNav" class="text-txtWhite  2md:text-txtDark  2md:txt-Dark sub-items">
                                 <li 
                                     class="py-2 px-3 font-dmSans font-normal text-sm 
                                     2md:hover:text-primary hover:text-gray-300"
@@ -86,11 +86,11 @@
                         </div>
                     </li> -->
                     <li 
-                        class=" cursor-pointer relative"                       
+                        class="pl-3 font-bold bod-l cursor-pointer"                       
                         @mouseleave="isProgramsMenu= false"
                     >
-                        <NuxtLink to="/programs" class="pl-3 font-bold bod-l">
-                            <span class="text-txtWhite">Programs</span>
+                        <NuxtLink to="/programs" @click="showNav = !showNav" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                            <span>Programs</span>
                         </NuxtLink>
                         <!-- <div 
                             @mouseenter="isProgramsMenu= true"
@@ -142,7 +142,7 @@
                             class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
                             text-[#333333] z-40 2md:top-[19px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items" @click="showNav = !showNav">
                                 <li 
                                     class="py-2 px-3 font-dmSans font-normal text-sm 
                                     2md:hover:text-primary hover:text-gray-300"
@@ -161,7 +161,7 @@
                         </div>
                     </li>
                     <li class=" pl-3 font-bold bod-l">
-                        <NuxtLink to="/contact-us" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                        <NuxtLink to="/contact-us" @click="showNav = !showNav" class=" text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Contact</span>
                         </NuxtLink>
                     </li>

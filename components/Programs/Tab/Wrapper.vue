@@ -28,7 +28,7 @@ import type { Title } from '#build/components';
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(['update:title'])
+const emit = defineEmits(['update:title']);
 const props = defineProps(['title']);
 const { default: defaultSlot } = defineSlots();
 const tabTitles = computed(() => defaultSlot().map((tab: any) => tab.props.title));
@@ -36,11 +36,11 @@ const tabTitles = computed(() => defaultSlot().map((tab: any) => tab.props.title
 const selectedTitle = ref(tabTitles.value[0])
 const selectTitle = (title: string) => {
     selectedTitle.value = title
-    emit('update:title', title)
+    emit('update:title', selectedTitle.value)
 }
 
 
-provide("selectedTitle", selectedTitle)
+provide("selectedTitle", selectedTitle);
 
 const items = ref([
     // {
