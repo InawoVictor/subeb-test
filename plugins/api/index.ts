@@ -1,6 +1,9 @@
 import axios from "axios";
 import Contact from "./contact";
-import Gallery from "./contact";
+import Gallery from "./gallery";
+import News from "./news";
+import Projects from "./projects";
+import Trainings from "./trainings";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
@@ -19,6 +22,9 @@ export default defineNuxtPlugin((nuxtApp) => {
   const init = {
     contact: Contact(api), 
     gallery: Gallery(api), 
+    news: News(api), 
+    projects: Projects(api), 
+    trainings: Trainings(api), 
   };
 
   // Provide the extended API object for global access

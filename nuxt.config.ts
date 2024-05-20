@@ -44,7 +44,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseURL: process.env.BASE_URL || 'https://dev.api.futurex.ng',
+      baseURL: process.env.BASE_URL,
     },
   },    
 
