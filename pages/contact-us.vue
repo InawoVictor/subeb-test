@@ -1,5 +1,5 @@
 <template>
-    <ResourcesHero title1="Resources" title2="Contact" />
+    <ResourcesHero :title1="title1" />
     <div class="w-full md:h-[120vh] h-[150vh] flex lg:flex-row flex-col relative">
         <div class="bg-white flex-1 lg:h-full  "></div>
         <div class="lg:w-[460px] w-full background lg:h-full h-[320px]"></div>
@@ -149,7 +149,9 @@ const code = ref({
     name: ""
 })
 const isLoading = ref(false)
-
+const title1 = ref({
+    text: "Contact",
+});
 
 const formData= reactive<FormData>({
     fullName: '',

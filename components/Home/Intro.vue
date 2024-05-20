@@ -1,5 +1,5 @@
 <template>
-  <div class="container md:pb-0 pb-6 flex lg:flex-row flex-col-reverse justify-between gap-y-6 items">
+  <div class="container md:pb-0 pb-6 mb-3 flex lg:flex-row flex-col-reverse justify-between gap-y-6 items">
     <div class="lg:w-[666px] w-full">
         <span class="text-sm font-dmSans font-500 text-secondary">Welcome Message</span>
         <div class="md:mt-5 mt-3">

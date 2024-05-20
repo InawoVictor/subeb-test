@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Header -->
-    <div class="h-[50px] w-full bg-transparent"></div>
+    <!-- <div class="h-[50px] w-full bg-transparent"></div> -->
     <header class=" lg:w-[916px] w-full lg:mx-auto sticky top-0 z-50">
         <div class="flex relative ">
             <NuxtLink to="/">
@@ -12,7 +12,7 @@
             </NuxtLink>
             <div class="flex items-center justify-end 2md:bg-primary bg-secondary flex-1 2md:pr-6 sm:pr-10 pr-7 ">
                 <ul :class="showNav ? `2md:flex 2md:flex-row flex-col nav show gap-x-5 text-[12px] 2md:text-txtWhite font-dmSans`: `2md:flex 2md:flex-row flex-col nav gap-x-5 text-[12px] 2md:text-txtWhite font-dmSans`">
-                    <li class="pl-3 font-bold bod-l cursor-pointer">
+                    <li class="pl-3 font-bold bod-l cursor-pointer" @click="showNav = !showNav">
                         <NuxtLink to="/" class=" text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Home</span>
                         </NuxtLink>
@@ -31,7 +31,7 @@
                             class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px] top-0 2md:top-[19px]
                             text-[#333333] z-40  2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite  2md:text-txtDark  2md:txt-Dark sub-items">
+                            <ul @click="showNav = !showNav" class="text-txtWhite  2md:text-txtDark  2md:txt-Dark sub-items">
                                 <li 
                                     class="py-2 px-3 font-dmSans font-normal text-sm 
                                     2md:hover:text-primary hover:text-gray-300"
@@ -56,7 +56,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li 
+                    <!-- <li 
                         class="pl-3 font-bold bod-l cursor-pointer relative"
                         @mouseenter="isResourcesMenu= true"
                         @mouseleave="isResourcesMenu= false"
@@ -75,12 +75,6 @@
                             text-[#333333] z-40 top-0 2md:top-[19px] 2md:left-[0] right-[-151px]"
                         >
                             <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
-                                <!-- <li 
-                                class="py-2 px-3 font-dmSans font-normal text-sm 
-                                    2md:hover:text-primary hover:text-gray-300"
-                                >
-                                    Lesson Notes
-                                </li> -->
                                 <li 
                                     class="py-2 px-3 font-dmSans font-normal text-sm 
                                     2md:hover:text-primary hover:text-gray-300"
@@ -90,12 +84,15 @@
                                 </li>
                             </ul> 
                         </div>
-                    </li>
+                    </li> -->
                     <li 
-                        class="pl-3 font-bold bod-l cursor-pointer relative"                       
+                        class="pl-3 font-bold bod-l cursor-pointer"                       
                         @mouseleave="isProgramsMenu= false"
                     >
-                        <div 
+                        <NuxtLink to="/programs" @click="showNav = !showNav" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                            <span>Programs</span>
+                        </NuxtLink>
+                        <!-- <div 
                             @mouseenter="isProgramsMenu= true"
                             class="text-txtWhite gap-x-3 flex justify-between items-center"
                         >
@@ -128,7 +125,7 @@
                                 >Trainings
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </li>
                     <li 
                         class="pl-3 font-bold bod-l cursor-pointer relative"
@@ -145,7 +142,7 @@
                             class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
                             text-[#333333] z-40 2md:top-[19px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items" @click="showNav = !showNav">
                                 <li 
                                     class="py-2 px-3 font-dmSans font-normal text-sm 
                                     2md:hover:text-primary hover:text-gray-300"
@@ -164,7 +161,7 @@
                         </div>
                     </li>
                     <li class=" pl-3 font-bold bod-l">
-                        <NuxtLink to="/contact-us" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                        <NuxtLink to="/contact-us" @click="showNav = !showNav" class=" text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Contact</span>
                         </NuxtLink>
                     </li>
@@ -175,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex bg-white">
+        <!--<div class="flex bg-white">
             <div class="bg-secondary py-2 2md:flex hidden justify-center items-center cursor-pointer w-[259px]">
                 <span class="text-[12px] font-dmSans font-normal text-txtWhite ">QUICKLINKS</span>
             </div>
@@ -185,22 +182,23 @@
                     >
                         <NuxtLink to="/media/gallery">Gallery</NuxtLink>
                     </li>
-                    <!-- <li class="text-[12px] sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">Blog</li> -->
+                    <li class="text-[12px] sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">Blog</li>
                     <li class="text-[12px] sm:px-0 px-2 font-normal sm:font-medium uppercase text-black hover:text-primary font-dmSans cursor-pointer"
                     >
                     <NuxtLink to="/media/news">News</NuxtLink>
                     </li>
-                    <!-- <li class="text-[12px] sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">Board</li> -->
+                    <li class="text-[12px] sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">Board</li>
                     <li class="text-[12px] sm:px-0 px-2 font-normal sm:font-medium uppercase text-black hover:text-primary font-dmSans cursor-pointer">
-                        <NuxtLink to="/programs/Projects">Projects</NuxtLink>
+                        <NuxtLink to="/programs">Projects</NuxtLink>
                     </li>
-                    <!-- <li class="text-[12px] flex gap-x-1 items-center sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">
+                    <li class="text-[12px] flex gap-x-1 items-center sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">
                         <span>Reports</span>
                         <img src="/svg/download.svg" alt="">
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </div>
+        -->
         <!-- <div class="w-[259px] flex">
             <div class="bg-whiteBg text-primary header-btn flex-1">Login</div>
             <div class="bg-primary text-txtWhite header-btn flex-1">Register</div>
@@ -214,7 +212,7 @@
     <div class="bg-[#1F1C1C] py-10">
         <div class="w-[80%] mx-auto flex flex-col gap-7 justify-between">
             <div class="flex lg:flex-row flex-col justify-between items-center md:gap-10 gap-7 ">
-                <div>
+                <!-- <div>
                     <h3 class="font-bold font-dmSans lg:text-[36px] md:text-[28px] sm:text-[16px] leading-9 text-txtWhite">
                         Subscribe to CRSUBEB Education Data
                     </h3>
@@ -222,7 +220,7 @@
                         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui 
                         Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
                     </p>
-                </div>
+                </div> -->
                 <!-- <div>
                     <div class="flex  gap-3">
                         <InputText placeholder="Enter your email" class="pl-2 flex-1" />
@@ -286,6 +284,7 @@
         </div>
     </div>
 
+    <DialogLoading />
   </div>
 </template>
 

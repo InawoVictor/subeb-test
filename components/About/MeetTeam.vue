@@ -5,93 +5,23 @@
                 Meet the team
             </h2>
             <ul class="grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] items-center justify-items-center justify-center gap-8">
-                <li class="card-3" @click="navigateTo('/about/management/etta-inyang-eyo')">
-                    <img src="/img/person-1.png" class="w-full h-[300px] object-cover" alt="Etta, Inyang Eyo">
+                <li class="card-4 " @click="navigateTo('/about/management/etta-inyang-eyo')">
+                    <img src="/img/etta.png" class="w-full h-[300px] object-cover" alt="Etta, Inyang Eyo">
                     <div class="py-4 px-6 ">
                         <h3 class="card3-header">Etta, Inyang Eyo</h3>
                         <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">Acting Chairman/Director of Admin.Position</span>
+                            <img src="/svg/folder.svg" class="mt-2 w-[11px] h-[8px]"  alt="">
+                            <p class="card3-subheader">Acting Chairman/Director of Admin</p>
                         </div>
                     </div>
                 </li>
-                <li class="card-3">
-                    <img src="/img/ansa.png" class="w-full h-[300px] object-cover" alt="Emmanuel Ansa">
+                <li class="card-4 " v-for="(member, i) in teamMembers" :key="i">
+                    <img :src="member.img" class="w-full h-[300px] object-cover" :alt="member.name">
                     <div class="py-4 px-6 ">
-                        <h3 class="card3-header">Emmanuel Ansa</h3>
+                        <h3 class="card3-header">{{member.name}}</h3>
                         <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">Director of internal audit</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card-3">
-                    <img src="/img/edu.png" class="w-full h-[300px] object-cover" alt="Egbe Richard Edu">
-                    <div class="py-4 px-6 ">
-                        <h3 class="card3-header">Egbe Richard Edu</h3>
-                        <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">EMIS Desk Officer</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card-3">
-                    <img src="/img/blessing.png" class="w-full h-[300px] object-cover" alt="Dr. Mrs Ugbe Blessing">
-                    <div class="py-4 px-6 ">
-                        <h3 class="card3-header">Dr. Mrs Ugbe Blessing</h3>
-                        <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">Director of social mobilization</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card-3">
-                    <img src="/img/carol.png" class="w-full h-[300px] object-cover" alt="Carol Asikpo">
-                    <div class="py-4 px-6 ">
-                        <h3 class="card3-header">Carol Asikpo</h3>
-                        <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">Director of planning, research and Statistics</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card-3">
-                    <img src="/img/pamela.png" class="w-full h-[300px] object-cover" alt="Dr. Pamela Njinse Ekuri">
-                    <div class="py-4 px-6 ">
-                        <h3 class="card3-header">Dr. Pamela Njinse Ekuri</h3>
-                        <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">Director of strategic planning/ BESDA Desk officer</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card-3">
-                    <img src="/img/regina.png" class="w-full h-[300px] object-cover" alt="Regina Ogbudu">
-                    <div class="py-4 px-6 ">
-                        <h3 class="card3-header">Regina Ogbudu</h3>
-                        <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">Director of Quality Assurance</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card-3">
-                    <img src="/img/evong.png" class="w-full h-[300px] object-cover" alt="Moduck Evong">
-                    <div class="py-4 px-6 ">
-                        <h3 class="card3-header">Moduck Evong</h3>
-                        <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">Procurement Officer</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card-3">
-                    <img src="/img/itor.png" class="w-full h-[300px] object-cover" alt="Itor, Fidelis Offiono">
-                    <div class="py-4 px-6 ">
-                        <h3 class="card3-header">Itor, Fidelis Offiono</h3>
-                        <div class="mt-4 flex gap-1 ">
-                            <img src="/svg/folder.svg" class="mt-2" width="11" height="8" alt="">
-                            <span class="card3-subheader">Director of Finance and supply</span>
+                            <img src="/svg/folder.svg" class="mt-2 w-[11px] h-[8px]"  alt="">
+                            <p class="card3-subheader text-wrap">{{member.position}}</p>
                         </div>
                     </div>
                 </li>
@@ -99,3 +29,49 @@
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+const teamMembers = ref([
+    {   
+        img: "/img/carol.png",
+        name: 'Carol Asikpo',
+        position: 'Director of planning, research and Statistics'
+    },
+    {   
+        img: "/img/itor.png",
+        name: 'Itor, Fidelis Offiono',
+        position: 'Director of Finance and supply'
+    },
+    {   
+        img: "/img/pamela.png",
+        name: 'Dr. Pamela Njinse Ekuri',
+        position: 'Director of strategic planning/BESDA Desk officer'
+    },
+    // {   
+    //     img: "/img/edu.png",
+    //     name: 'Egbe Richard Edu',
+    //     position: 'EMIS Desk Officer'
+    // },
+    // {   
+    //     img: "/img/blessing.png",
+    //     name: 'Dr. Mrs Ugbe Blessing',
+    //     position: 'Director of social mobilization'
+    // },
+    // {   
+    //     img: "/img/evong.png",
+    //     name: 'Moduck Evong',
+    //     position: 'Procurement Officer'
+    // },
+    {   
+        img: "/img/regina.png",
+        name: 'Regina Ogbudu',
+        position: 'Director of Quality Assurance'
+    },
+    {   
+        img: "/img/ansa.png",
+        name: 'Emmanuel Ansa',
+        position: 'Director of internal audit'
+    },
+    
+])
+</script>
