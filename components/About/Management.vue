@@ -4,7 +4,7 @@
             <div class="flex flex-col md:gap-y-8 xl:items-start items-center gap-y-5 flex-1">
                 <span class="header-text">The Management</span>
                 <p class="content">
-                    020066It gives me great pleasure to serve as the Hon. 
+                    It gives me great pleasure to serve as the Hon. 
                     Commissioner for Quality Education, especially in such a 
                     great time as this, to guide this great agency toward 
                     the next phase of notable change, improvement and overall 
@@ -21,8 +21,11 @@
                 </p>
             </div>
             <div>
-                <img src="/img/person-2.png" class="w-[233px] lg:w-[492px] lg:h-[453px] h-[250px]" alt="">
+                <img src="/img/management.png" class="w-[233px] sm:w-[400px] lg:w-[492px] sm:h-[350px] lg:h-[453px] h-[250px]" alt="">
             </div>
         </div>
+        <!-- <div class="container">
+            <img src="/img/management.png" class="w-full object-contain h-[453px] " alt="The management">
+        </div> -->
     </div>
 </template>

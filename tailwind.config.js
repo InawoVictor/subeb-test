@@ -19,6 +19,7 @@ export default {
         txtDark: "#333333",
         txtDark2: "#242424",
         txtDark3: "#666666",
+        blueBg: "#1D67B4",
         grayBg: "#F8F8F8",
         darkBgSec: '#27293D',
         whiteBg: '#ffffff'
@@ -28,7 +29,8 @@ export default {
         avenir: ["Sen", "sans-serif"],
         dmSans: ["DM Sans", "sans-serif"],
         workSans: ["Work Sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"]
+        montserrat: ["Montserrat", "sans-serif"],
+        arimo: ["Arimo", "sans-serif"],
       },
       fontSize: {
         nl: ["56px", "64px"],

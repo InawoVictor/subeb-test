@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Header -->
-    <div class="h-[50px] w-full bg-transparent"></div>
+    <!-- <div class="h-[50px] w-full bg-transparent"></div> -->
     <header class=" lg:w-[916px] w-full lg:mx-auto sticky top-0 z-50">
         <div class="flex relative ">
             <NuxtLink to="/">
@@ -12,43 +12,43 @@
             </NuxtLink>
             <div class="flex items-center justify-end 2md:bg-primary bg-secondary flex-1 2md:pr-6 sm:pr-10 pr-7 ">
                 <ul :class="showNav ? `2md:flex 2md:flex-row flex-col nav show gap-x-5 text-[12px] 2md:text-txtWhite font-dmSans`: `2md:flex 2md:flex-row flex-col nav gap-x-5 text-[12px] 2md:text-txtWhite font-dmSans`">
-                    <li class="pl-3 font-bold bod-l cursor-pointer">
+                    <li class="pl-3 font-bold bod-l cursor-pointer" @click="showNav = !showNav">
                         <NuxtLink to="/" class=" text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Home</span>
                         </NuxtLink>
                     </li>
                     <li 
-                        class="pl-3 font-bold bod-l cursor-pointer "
-                        :class="
-                            isAboutMenu ?
-                            'relative' :
-                            ''
-                        "
-                        @mouseenter="isAboutMenu= true"
+                        class="pl-3 font-bold bod-l cursor-pointer relative"                       
                         @mouseleave="isAboutMenu= false"
                     >
-                        <div class="text-txtWhite gap-x-3 flex justify-between items-center">
+                        <div @mouseenter="isAboutMenu= true" class="text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>About</span>
                             <Icon name="oui:arrow-down" size="12" color="white" />
                         </div>
                         <div
                             id="AboutMenu"
                             v-if="isAboutMenu"
-                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px] 
-                            text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
+                            class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px] top-0 2md:top-[19px]
+                            text-[#333333] z-40  2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                            <ul @click="showNav = !showNav" class="text-txtWhite  2md:text-txtDark  2md:txt-Dark sub-items">
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm 
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/about/crsubeb')"
                                 >
                                     CRSUBEB
                                 </li>
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/about/management')"
                                 >
                                     The Management
                                 </li>
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/about/departments')"
                                 >
                                     Departments
@@ -56,17 +56,15 @@
                             </ul>
                         </div>
                     </li>
-                    <li 
-                        class="pl-3 font-bold bod-l cursor-pointer"
-                        :class="
-                            isResourcesMenu ?
-                            'relative' :
-                            ''
-                        "
+                    <!-- <li 
+                        class="pl-3 font-bold bod-l cursor-pointer relative"
                         @mouseenter="isResourcesMenu= true"
                         @mouseleave="isResourcesMenu= false"
                     >
-                        <div class="text-txtWhite gap-x-3 flex justify-between items-center">
+                        <div 
+                            @mouseenter="isResourcesMenu= true"
+                            class="text-txtWhite gap-x-3 flex justify-between items-center"
+                        >
                             <span>Resources</span>
                             <Icon name="oui:arrow-down" size="12" color="white" />
                         </div>
@@ -74,31 +72,30 @@
                             id="ResourcesMenu"
                             v-if="isResourcesMenu"
                             class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
-                            text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
+                            text-[#333333] z-40 top-0 2md:top-[19px] 2md:left-[0] right-[-151px]"
                         >
                             <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm">
-                                    Lesson Notes
-                                </li>
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm 
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/resources/emis-data')"
                                 >
                                     EMIS Report
                                 </li>
                             </ul> 
                         </div>
-                    </li>
+                    </li> -->
                     <li 
-                        class="pl-3 font-bold bod-l cursor-pointer"
-                        :class="
-                            isProgramsMenu ?
-                            'relative' :
-                            ''
-                        "
-                        @mouseenter="isProgramsMenu= true"
+                        class="pl-3 font-bold bod-l cursor-pointer"                       
                         @mouseleave="isProgramsMenu= false"
                     >
-                        <div class="text-txtWhite gap-x-3 flex justify-between items-center">
+                        <NuxtLink to="/programs" @click="showNav = !showNav" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                            <span>Programs</span>
+                        </NuxtLink>
+                        <!-- <div 
+                            @mouseenter="isProgramsMenu= true"
+                            class="text-txtWhite gap-x-3 flex justify-between items-center"
+                        >
                             <span>Programs</span>
                             <Icon name="oui:arrow-down" size="12" color="white" />
                         </div>
@@ -106,31 +103,32 @@
                             id="ProgramsMenu"
                             v-if="isProgramsMenu"
                             class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
-                            text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
+                            text-[#333333] z-40 top-0 2md:top-[19px] 2md:left-[0] right-[-151px]"
                         >
                             <ul class="text-txtWhite 2md:text-txtDark sub-items">
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm 
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/programs/Overview')"
                                 >
                                     Overview
                                 </li>
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm 
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/programs/Projects')"
                                 >Projects</li>
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm 
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/programs/Trainings')"
                                 >Trainings
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </li>
                     <li 
-                        class="pl-3 font-bold bod-l cursor-pointer"
-                        :class="
-                            isMediaMenu ?
-                            'relative' :
-                            ''
-                        "
+                        class="pl-3 font-bold bod-l cursor-pointer relative"
                         @mouseenter="isMediaMenu= true"
                         @mouseleave="isMediaMenu= false"
                     >
@@ -142,15 +140,19 @@
                             id="MediaMenu"
                             v-if="isMediaMenu"
                             class="absolute 2md:bg-whiteBg bg-secondary2 w-[151px]
-                            text-[#333333] z-40 2md:top-[26px] top-[0] 2md:left-[0] right-[-151px]"
+                            text-[#333333] z-40 2md:top-[19px] top-[0] 2md:left-[0] right-[-151px]"
                         >
-                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items">
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                            <ul class="text-txtWhite 2md:text-txtDark 2md:txt-Dark sub-items" @click="showNav = !showNav">
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm 
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/media/gallery')"
                                 >
                                     Gallery
                                 </li>
-                                <li class="py-2 px-3 font-dmSans font-normal text-sm"
+                                <li 
+                                    class="py-2 px-3 font-dmSans font-normal text-sm 
+                                    2md:hover:text-primary hover:text-gray-300"
                                     @click="navigateTo('/media/news')"
                                 >
                                     News
@@ -159,7 +161,7 @@
                         </div>
                     </li>
                     <li class=" pl-3 font-bold bod-l">
-                        <NuxtLink to="/contact-us" class=" text-txtWhite gap-x-3 flex justify-between items-center">
+                        <NuxtLink to="/contact-us" @click="showNav = !showNav" class=" text-txtWhite gap-x-3 flex justify-between items-center">
                             <span>Contact</span>
                         </NuxtLink>
                     </li>
@@ -170,36 +172,37 @@
                 </div>
             </div>
         </div>
-        <div class="flex bg-white">
+        <!--<div class="flex bg-white">
             <div class="bg-secondary py-2 2md:flex hidden justify-center items-center cursor-pointer w-[259px]">
-                <span class="text-[12px] font-dmSans font-[400] text-txtWhite ">QUICKLINKS</span>
+                <span class="text-[12px] font-dmSans font-normal text-txtWhite ">QUICKLINKS</span>
             </div>
             <div class="flex flex-1 items-center py-2 2md:pl-5 px-10">
-                <ul class=" flex flex-wrap w-full sm:gap-0 gap-x-6 gap-y-4 2md:px-10 sm:justify-between items-center">
-                    <li class="text-[12px] px-2 font-[400] uppercase  text-black font-dmSans cursor-pointer"
-                    @click="navigateTo('/media/gallery')"
+                <ul class=" flex flex-wrap w-full sm:gap-x-7 gap-x-6 gap-y-4 2md:px-10 sm:justify-start items-center">
+                    <li class="text-[12px] px-2 font-normal sm:font-medium uppercase hover:text-primary text-black font-dmSans cursor-pointer"                 
                     >
-                        Gallery
+                        <NuxtLink to="/media/gallery">Gallery</NuxtLink>
                     </li>
-                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Blog</li>
-                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer"
-                        @click="navigateTo('/media/news')"
+                    <li class="text-[12px] sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">Blog</li>
+                    <li class="text-[12px] sm:px-0 px-2 font-normal sm:font-medium uppercase text-black hover:text-primary font-dmSans cursor-pointer"
                     >
-                        News
+                    <NuxtLink to="/media/news">News</NuxtLink>
                     </li>
-                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Board</li>
-                    <li class="text-[12px] sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">Projects</li>
-                    <li class="text-[12px] flex gap-x-1 items-center sm:px-0 px-2 font-[400] uppercase text-black font-dmSans cursor-pointer">
+                    <li class="text-[12px] sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">Board</li>
+                    <li class="text-[12px] sm:px-0 px-2 font-normal sm:font-medium uppercase text-black hover:text-primary font-dmSans cursor-pointer">
+                        <NuxtLink to="/programs">Projects</NuxtLink>
+                    </li>
+                    <li class="text-[12px] flex gap-x-1 items-center sm:px-0 px-2 font-normal uppercase text-black font-dmSans cursor-pointer">
                         <span>Reports</span>
                         <img src="/svg/download.svg" alt="">
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="w-[259px] flex">
+        -->
+        <!-- <div class="w-[259px] flex">
             <div class="bg-whiteBg text-primary header-btn flex-1">Login</div>
             <div class="bg-primary text-txtWhite header-btn flex-1">Register</div>
-        </div>
+        </div> -->
     </header>
 
     <!-- Nuxt Route -->
@@ -209,7 +212,7 @@
     <div class="bg-[#1F1C1C] py-10">
         <div class="w-[80%] mx-auto flex flex-col gap-7 justify-between">
             <div class="flex lg:flex-row flex-col justify-between items-center md:gap-10 gap-7 ">
-                <div>
+                <!-- <div>
                     <h3 class="font-bold font-dmSans lg:text-[36px] md:text-[28px] sm:text-[16px] leading-9 text-txtWhite">
                         Subscribe to CRSUBEB Education Data
                     </h3>
@@ -217,8 +220,8 @@
                         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui 
                         Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
                     </p>
-                </div>
-                <div>
+                </div> -->
+                <!-- <div>
                     <div class="flex  gap-3">
                         <InputText placeholder="Enter your email" class="pl-2 flex-1" />
                         <button class="btn text-nowrap">Notify me</button>
@@ -226,7 +229,7 @@
                     <p class="font-inter sm:text-[12px] text-[8px] font-normal mt-1 text-[#D1D5DB]">
                         We care about the protection of your data. Read our <span class="underline">Privacy Policy.</span> 
                     </p>
-                </div>
+                </div> -->
             </div>
             <div class="flex lg:flex-row flex-col gap-y-8 justify-between items-center">
                 <div class="w-[307px] flex flex-col lg:items-start items-center gap-3">
@@ -259,7 +262,7 @@
                     <span class="font-avenir font-[900] text-sm text-[#E0E0E0]">
                         Follow us on
                     </span>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center">
                         <span class="">
                             <Icon 
                                 name="basil:facebook-solid"                                 
@@ -267,38 +270,21 @@
                                 class=" p-2 border border-solid border-white rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]"
                             />
                         </span>
-                        <span>
-                            <Icon name="ant-design:instagram-outlined" 
-                                width="45" height="45" 
-                                color="white" 
-                                class=" p-2 border border-solid border-white rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]"
-                            />
-                        </span>
-                        <span>
-                            <Icon name="akar-icons:linkedin-fill" 
-                                width="45" height="45" 
-                                color="white" 
-                                class=" p-2 border border-solid border-white rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]"
-                            />
-                        </span>
-                        <span>
-                            <Icon name="ri:twitter-fill" 
-                                width="45" height="45" 
-                                color="white" 
-                                class=" p-2 border border-solid border-white rounded-full md:w-[45px] md:h-[45px] w-[30px] h-[30px]"
-                            />
-                        </span>
                     </div>
                 </div>
             </div>
-            <div class="lg:self-end self-center">
-                <span class="font-avenir font-[900] lg:text-[16px] md:text-sm text-[8px] text-[#E0E0E0]">
-                    Powered by Future-X
-                </span>
+            <div class="lg:self-end self-center flex gap-x-1 items-center">
+                <p class="font-avenir font-[900] lg:text-[16px] md:text-sm text-[8px] text-[#E0E0E0]">
+                    Powered by <span class="text-[#6AB43E]">Future-</span><span class="text-[#195176]">X</span>
+                </p>
+                <div class="sm:w-[45px] sm:h-[45px] w-[38px] h-[38px] rounded-full bg-whiteBg flex items-center justify-center">
+                    <img src="/svg/futurex-logo.svg" class="w-[16px] sm:w-[23px] sm:h-[28px] h-[21px]" alt="">
+                </div>
             </div>
         </div>
     </div>
 
+    <DialogLoading />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <ResourcesHero title1="About" title2="Departments" title3="Support Service Department" />
+    <ResourcesHero :title1="title1" :title2="title2" :title3="title3" />
     <div class="bg-grayBg">
         <div class="container ">
             <div class="flex xl:flex-row flex-col items-center xl:items-start md:gap-20 gap-12 rounded-r-[20px] overflow-hidden">
@@ -74,3 +74,17 @@
 
     </div>
 </template>
+
+<script setup lang="ts">
+const title1 = ref({
+    text: "About",
+    to: "/about/crsubeb",
+});
+const title2 = ref({
+    text: "Departments",
+    to: "/about/departments",
+});
+const title3 = ref({
+    text: "Support Service Department",
+});
+</script>

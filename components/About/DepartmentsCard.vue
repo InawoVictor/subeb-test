@@ -16,7 +16,7 @@
                 class="
                     md:mt-6 sm:mt-5 mt-3 lg:mt-10  flex items-center sm:gap-2 gap-1 
                     md:px-4 px-2 py-[1px] md:py-2  text-sm bg-secondary text-white cursor-pointer
-                    border border-transparent rounded-md focus:outline-none
+                    border border-transparent focus:outline-none
                 "
                 @click="router.push(`/about/departments${to}`)"
             >
