@@ -1,5 +1,5 @@
 <template>
-    <ResourcesHero title1="Programs" :title2="selectedTab"/>
+    <ResourcesHero :title1="title1" :title2="title2"/>
     <ProgramsTabWrapper @update:title="getSelectedTab">
         <ProgramsTab title="Projects">
             <ProgramsProjects 
@@ -41,7 +41,14 @@ const projects = useProjectsStore()
 const trainings = useTrainingsStore()
 const projectsData = ref<any>(null)
 const trainingsData = ref<any>(null)
-const selectedTab = ref("Projects")
+const selectedTab = ref("Projects");
+const title1 = ref({
+    text: "Programs",
+    to: "/programs",
+});
+const title2 = ref({
+    text: selectedTab.value,
+});
 
 const getSelectedTab = (value: string) => {
     // console.log("value", value)

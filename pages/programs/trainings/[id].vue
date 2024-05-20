@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ResourcesHero title1="Media" title2="programs" title3="Training"/>
+        <ResourcesHero :title1="title1" :title2="title2"/>
         <div class="bg-whiteBg w-full" v-if="trainingData">
             <div class=" pt-8">
                 <div class="">
@@ -70,6 +70,13 @@ const router = useRouter();
 const route = useRoute();
 const training = useTrainingsStore();
 const trainingData = ref<any>(null);
+const title1 = ref({
+    text: "Programs",
+    to: "/programs",
+});
+const title2 = ref({
+    text: "Training",
+});
 
 const getSingleTraining = async () => {
     let id = route.params.id;

@@ -2,19 +2,39 @@
     <div class="hero overflow-hidden md:mt-[-213px] mt-[-316px] relative h-[544px]">
         <div class="flex flex-col items-start absolute stay-center top-[75%] sm:top-[70%] md:top-[300px] lg:w-[895px]">
             <h1 class="font-inter font-[600] lg:text-[48px] md:text-[35px] text-[23px] text-txtWhite">
-                {{title1}}
+                {{title1.text}}
             </h1>
             <p class="text-txtWhite lg:mt-12 sm:mt-8 mt-4 font-medium md:text-xl text-sm font-inter">
-                <RouterLink class="text-txtWhite font-medium text-xl font-inter" to="/resources">{{title1}} / </RouterLink>
-                <span>{{title2}}</span> 
-                <span v-if="title3"> / {{title3}}</span> 
+                <NuxtLink class="text-txtWhite font-medium text-xl font-inter" :to="title1?.to">{{title1.text}} </NuxtLink>
+                <NuxtLink :to="title2.to" v-if="title2">/ {{title2.text}}</NuxtLink> 
+                <NuxtLink :to="title3.to" v-if="title3"> / {{title3.text}}</NuxtLink> 
             </p>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-    const props = defineProps(["title1", "title2", "title3"])
+    const props = defineProps({
+        title1: {
+            type: Object as () => ({
+                text: string,
+                to?: string,
+            }),
+            required: true
+        },
+        title2: {
+            type: Object as () => ({
+                text: string,
+                to?: string,
+            }),
+        },
+        title3: {
+            type: Object as () => ({
+                text: string,
+                to?: string,
+            })
+        }
+    })
 </script>
 
 <style scoped>

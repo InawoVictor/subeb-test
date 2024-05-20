@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ResourcesHero title1="Media" title2="News"/>
+        <ResourcesHero :title1="title1" :title2="title2"/>
         <div class="bg-whiteBg w-full" v-if="newsData">
             <div class=" pt-8">
                 <div class="">
@@ -111,6 +111,13 @@ const router = useRouter();
 const route = useRoute();
 const news = useNewsStore();
 const newsData = ref(null);
+const title1 = ref({
+    text: "Media",
+    to: "/media/gallery",
+});
+const title2 = ref({
+    text: "News",
+});
 
 const responsiveOptions = ref([
     {

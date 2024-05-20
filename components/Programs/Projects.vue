@@ -49,6 +49,8 @@
 </style>
 
 <script lang="ts" setup>
+import { defineProps, defineEmits } from "vue"
+
 interface Image{
     Location: string;
     id: string;
