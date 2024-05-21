@@ -68,7 +68,6 @@ onMounted(() => {
     loadProjects();
     loadNews();
     loadGallery();
-    // loadTrainings()
 })
 </script>
 
